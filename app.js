@@ -262,7 +262,7 @@ const renderCards = () => {
     return;
   }
 
-  activeHourTitle.textContent = `${getFullLabel(entry)} 热搜`;
+  activeHourTitle.textContent = `${getShortLabel(entry)} 热搜`;
   activeHourSummary.textContent = entry.isMissing
     ? "这一小时暂时没有抓取到热搜快照。数据会在后续整点更新后自动补齐。"
     : entry.summary;
