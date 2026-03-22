@@ -56,8 +56,8 @@ const filledHoursButton = document.querySelector("#filledHoursButton");
 const allHoursButton = document.querySelector("#allHoursButton");
 const timelineButtonTemplate = document.querySelector("#timelineButtonTemplate");
 const cardTemplate = document.querySelector("#cardTemplate");
-const APP_VERSION = "2026.03.23-1";
-const SW_CACHE_VERSION = "hourly-hot-search-v2";
+const APP_VERSION = "2026.03.23-2";
+const SW_CACHE_VERSION = "hourly-hot-search-v3";
 
 const formatNow = () =>
   new Intl.DateTimeFormat("zh-CN", {

@@ -1,4 +1,4 @@
-const CACHE_NAME = "hourly-hot-search-v2";
+const CACHE_NAME = "hourly-hot-search-v3";
 const DATA_URL = "./data/hourly-trends.json";
 const APP_SHELL = [
   "./",
@@ -27,6 +27,12 @@ self.addEventListener("fetch", (event) => {
   const requestUrl = new URL(event.request.url);
   const isDataRequest = requestUrl.pathname.endsWith("/data/hourly-trends.json");
   const isNavigationRequest = event.request.mode === "navigate";
+  const isShellAsset =
+    requestUrl.pathname.endsWith("/index.html") ||
+    requestUrl.pathname.endsWith("/app.js") ||
+    requestUrl.pathname.endsWith("/styles.css") ||
+    requestUrl.pathname === "/hotthings/" ||
+    requestUrl.pathname === "/hotthings";
 
   if (isDataRequest) {
     event.respondWith(
@@ -43,6 +49,19 @@ self.addEventListener("fetch", (event) => {
 
   if (isNavigationRequest) {
     event.respondWith(fetch(event.request).catch(() => caches.match("./index.html")));
+    return;
+  }
+
+  if (isShellAsset) {
+    event.respondWith(
+      fetch(event.request)
+        .then((response) => {
+          const cloned = response.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, cloned));
+          return response;
+        })
+        .catch(() => caches.match(event.request).then((cached) => cached || caches.match("./index.html")))
+    );
     return;
   }
 
