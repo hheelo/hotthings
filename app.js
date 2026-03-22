@@ -45,6 +45,7 @@ const activeHourSummary = document.querySelector("#activeHourSummary");
 const timeCaption = document.querySelector("#timeCaption");
 const updateBadge = document.querySelector("#updateBadge");
 const dataHint = document.querySelector("#dataHint");
+const versionHint = document.querySelector("#versionHint");
 const refreshButton = document.querySelector("#refreshButton");
 const prevDayButton = document.querySelector("#prevDayButton");
 const nextDayButton = document.querySelector("#nextDayButton");
@@ -55,6 +56,8 @@ const filledHoursButton = document.querySelector("#filledHoursButton");
 const allHoursButton = document.querySelector("#allHoursButton");
 const timelineButtonTemplate = document.querySelector("#timelineButtonTemplate");
 const cardTemplate = document.querySelector("#cardTemplate");
+const APP_VERSION = "2026.03.23-1";
+const SW_CACHE_VERSION = "hourly-hot-search-v2";
 
 const formatNow = () =>
   new Intl.DateTimeFormat("zh-CN", {
@@ -208,6 +211,7 @@ const renderLoading = (message) => {
   timeCaption.textContent = `最近刷新：${formatNow()}`;
   updateBadge.textContent = "加载中";
   dataHint.textContent = "数据文件路径：./data/hourly-trends.json";
+  versionHint.textContent = `页面版本 ${APP_VERSION} · SW ${SW_CACHE_VERSION}`;
 };
 
 const renderTimeline = () => {
@@ -262,6 +266,7 @@ const renderCards = () => {
   timeCaption.textContent = `最近刷新：${formatNow()}`;
   updateBadge.textContent = state.payload.source || "未标注来源";
   dataHint.textContent = `数据更新时间：${formatDataTime(state.payload.updatedAt)}`;
+  versionHint.textContent = `页面版本 ${APP_VERSION} · SW ${SW_CACHE_VERSION}`;
   cards.innerHTML = "";
 
   if (entry.isMissing) {

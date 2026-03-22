@@ -125,7 +125,8 @@ h2 {
 .time-caption,
 .data-hint,
 .loading-copy,
-.day-hint {
+.day-hint,
+.version-hint {
   color: var(--muted);
 }
 
@@ -312,6 +313,12 @@ h2 {
   margin: 0.75rem 0 0;
   font-size: 0.9rem;
   line-height: 1.6;
+}
+
+.version-hint {
+  margin: 0.55rem 0 0;
+  font-size: 0.78rem;
+  line-height: 1.5;
 }
 
 .cards {
