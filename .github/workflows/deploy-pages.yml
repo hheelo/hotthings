@@ -18,12 +18,25 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      DATA_BRANCH: data-cache
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Restore latest hourly trends from data branch
+        run: |
+          git fetch origin "${DATA_BRANCH}" || true
+          if git show-ref --verify --quiet "refs/remotes/origin/${DATA_BRANCH}"; then
+            git show "origin/${DATA_BRANCH}:data/hourly-trends.json" > ./data/hourly-trends.json
+          else
+            echo "Data branch not found yet; keeping repository data file."
+          fi
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

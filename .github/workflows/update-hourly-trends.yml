@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -17,12 +17,17 @@ concurrency:
 jobs:
   update-and-deploy:
     runs-on: ubuntu-latest
+    env:
+      CODE_BRANCH: ${{ github.ref_name }}
+      DATA_BRANCH: data-cache
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
 
       - name: Set up Node.js
         uses: actions/setup-node@v6
@@ -38,6 +43,31 @@ jobs:
           MAX_HOURS: "24"
           MAX_ITEMS: "20"
         run: node ./scripts/update-hourly-trends.mjs
+
+      - name: Persist latest hourly trends to data branch
+        run: |
+          mkdir -p /tmp/hotthings-data-branch
+          cp ./data/hourly-trends.json /tmp/hotthings-data-branch/hourly-trends.json
+          git fetch origin "${DATA_BRANCH}:${DATA_BRANCH}" || true
+          if git show-ref --verify --quiet "refs/heads/${DATA_BRANCH}"; then
+            git switch "${DATA_BRANCH}"
+          else
+            git switch --orphan "${DATA_BRANCH}"
+            git rm -rf . >/dev/null 2>&1 || true
+          fi
+          mkdir -p data
+          cp /tmp/hotthings-data-branch/hourly-trends.json ./data/hourly-trends.json
+          git add data/hourly-trends.json
+          if git diff --cached --quiet; then
+            echo "No data changes to persist."
+            git switch "${CODE_BRANCH}"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update hourly hot search data"
+          git push origin "${DATA_BRANCH}"
+          git switch "${CODE_BRANCH}"
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

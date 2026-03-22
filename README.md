@@ -21,7 +21,8 @@
 1. GitHub Actions 每小时优先抓取微博热搜 JSON 接口，失败时回退到微博页面解析，再失败才回退到知乎热榜 JSON
 2. 用 OpenAI Responses API 生成整体概括和每条简要概括
 3. 在工作流运行目录内生成最新 `data/hourly-trends.json`
-4. 直接部署到 GitHub Pages，不再把更新后的 JSON 提交回仓库
+4. 把最新 JSON 持久化到 `data-cache` 分支
+5. 自动和手动部署都会优先读取 `data-cache` 分支里的最新 JSON 再发布
 
 如果没有配置 `OPENAI_API_KEY`，脚本仍可运行，但会退回到规则生成的保守摘要。
 
@@ -84,6 +85,6 @@ OPENAI_API_KEY=your_key_here node ./scripts/update-hourly-trends.mjs
 
 - 当前抓取源默认优先使用微博 JSON 接口 `https://weibo.com/ajax/side/hotSearch`，失败时回退到微博页面解析，再失败才回退到知乎热榜 JSON。
 - 摘要是基于热搜标题生成的保守概括，不应当当作完整新闻事实摘要。
-- 定时更新不会再往 `master` 产生新提交；只有你自己改代码并 push 时，仓库历史才会增加提交记录。
+- 定时更新不会再往 `master` 产生新提交；最新数据会写到 `data-cache` 分支，代码和数据分支分离。
 - 当 AI 摘要不可用时，系统会优先使用抓取源自带的摘要内容；只有源数据没有摘要时，才退回规则生成。
 - AI 摘要请求当前使用的是兼容模式：基于 `responses` 接口发送纯文本输入，并解析纯文本输出，避免依赖部分第三方服务不支持的 `json_schema` 或高级参数。
