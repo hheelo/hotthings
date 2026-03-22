@@ -18,7 +18,7 @@
 
 默认方案是：
 
-1. GitHub Actions 每小时优先抓取微博热搜页面，失败时回退到知乎热榜 JSON
+1. GitHub Actions 每小时优先抓取微博热搜 JSON 接口，失败时回退到微博页面解析，再失败才回退到知乎热榜 JSON
 2. 用 OpenAI Responses API 生成整体概括和每条简要概括
 3. 写入 `data/hourly-trends.json`
 4. GitHub Pages 自动发布静态站点
@@ -78,5 +78,5 @@ OPENAI_API_KEY=your_key_here node ./scripts/update-hourly-trends.mjs
 
 ## 说明
 
-- 当前抓取源默认优先使用微博页面解析，失败时回退到知乎热榜 JSON。
+- 当前抓取源默认优先使用微博 JSON 接口 `https://weibo.com/ajax/side/hotSearch`，失败时回退到微博页面解析，再失败才回退到知乎热榜 JSON。
 - 摘要是基于热搜标题生成的保守概括，不应当当作完整新闻事实摘要。

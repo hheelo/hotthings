@@ -5,6 +5,7 @@ import process from "node:process";
 const ROOT_DIR = process.cwd();
 const DATA_PATH = path.join(ROOT_DIR, "data", "hourly-trends.json");
 const ZHIHU_SOURCE_URL = "https://api.zhihu.com/topstory/hot-list";
+const WEIBO_AJAX_SOURCE_URL = "https://weibo.com/ajax/side/hotSearch";
 const WEIBO_SOURCE_URL = "https://s.weibo.com/top/summary?cate=realtimehot";
 const TIMEZONE = "Asia/Shanghai";
 const MAX_HOURS = Number.parseInt(process.env.MAX_HOURS || "24", 10);
@@ -121,6 +122,12 @@ const fallbackHourSummary = (items) => {
   return `这一小时热搜主要集中在${joined}话题，用户更关注最新进展、事件影响和可快速理解的背景信息。`;
 };
 
+const buildWeiboTopicUrl = (title, rank) => {
+  const query = encodeURIComponent(title);
+  const bandRank = Number.isFinite(rank) ? `&band_rank=${rank}` : "";
+  return `https://s.weibo.com/weibo?q=${query}&t=31${bandRank}&Refer=top`;
+};
+
 const fetchZhihuHotSearch = async () => {
   const response = await fetch(ZHIHU_SOURCE_URL, {
     headers: {
@@ -169,6 +176,47 @@ const fetchZhihuHotSearch = async () => {
 
   if (!items.length) {
     throw new Error("No hot-search items parsed from Zhihu JSON.");
+  }
+
+  return items;
+};
+
+const fetchWeiboAjaxHotSearch = async () => {
+  const response = await fetch(WEIBO_AJAX_SOURCE_URL, {
+    headers: {
+      "user-agent": "Mozilla/5.0",
+      accept: "application/json,text/plain,*/*",
+      referer: "https://weibo.com/"
+    }
+  });
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Weibo hot search JSON: HTTP ${response.status}`);
+  }
+
+  const payload = await response.json();
+  const realtime = Array.isArray(payload?.data?.realtime) ? payload.data.realtime : [];
+  const items = realtime
+    .map((entry, index) => {
+      const title = stripTags(entry?.word || entry?.note || "");
+      const rank = Number.parseInt(entry?.rank || `${index + 1}`, 10);
+      const label = stripTags(entry?.label_name || "");
+      const rawHeat = entry?.raw_hot || entry?.num || entry?.onboard_time || "";
+      const decoratedTitle = label ? `${title} ${label}` : title;
+
+      return {
+        title: decoratedTitle.trim(),
+        desc: "",
+        category: inferCategory(title),
+        heat: normalizeHeat(String(rawHeat || "热议中")),
+        url: buildWeiboTopicUrl(title, rank)
+      };
+    })
+    .filter((item) => item.title)
+    .slice(0, MAX_ITEMS);
+
+  if (!items.length) {
+    throw new Error("No hot-search items parsed from Weibo JSON.");
   }
 
   return items;
@@ -258,23 +306,37 @@ const fetchWeiboHotSearch = async () => {
 
 const fetchHotSearch = async () => {
   try {
+    const items = await fetchWeiboAjaxHotSearch();
+    return {
+      platform: "微博热搜",
+      items
+    };
+  } catch (weiboAjaxError) {
+    process.stderr.write(
+      `Weibo JSON fetch failed, falling back to Weibo HTML: ${
+        weiboAjaxError instanceof Error ? weiboAjaxError.message : String(weiboAjaxError)
+      }\n`
+    );
+  }
+
+  try {
     const items = await fetchWeiboHotSearch();
     return {
       platform: "微博热搜",
       items
     };
-  } catch (weiboError) {
+  } catch (weiboHtmlError) {
     process.stderr.write(
-      `Weibo fetch failed, falling back to Zhihu: ${
-        weiboError instanceof Error ? weiboError.message : String(weiboError)
+      `Weibo HTML fetch failed, falling back to Zhihu: ${
+        weiboHtmlError instanceof Error ? weiboHtmlError.message : String(weiboHtmlError)
       }\n`
     );
   }
 
-  const items = await fetchZhihuHotSearch();
+  const zhihuItems = await fetchZhihuHotSearch();
   return {
     platform: "知乎热榜",
-    items
+    items: zhihuItems
   };
 };
 
