@@ -118,7 +118,25 @@ const inferCategory = (title) => {
 const fallbackSummaryForTitle = (title) =>
   `围绕“${title}”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。`;
 
+const buildSourceBackedHourSummary = (items) => {
+  const sourcedDescs = items
+    .map((item) => truncateText(item.desc, 28))
+    .filter(Boolean)
+    .slice(0, 2);
+
+  if (sourcedDescs.length) {
+    return sourcedDescs.join("；");
+  }
+
+  return "";
+};
+
 const fallbackHourSummary = (items) => {
+  const sourceBacked = buildSourceBackedHourSummary(items);
+  if (sourceBacked) {
+    return sourceBacked;
+  }
+
   const categories = [...new Set(items.map((item) => item.category))].slice(0, 3);
   const joined = categories.join("、") || "综合";
   return `这一小时热搜主要集中在${joined}话题，用户更关注最新进展、事件影响和可快速理解的背景信息。`;

@@ -85,3 +85,4 @@ OPENAI_API_KEY=your_key_here node ./scripts/update-hourly-trends.mjs
 - 当前抓取源默认优先使用微博 JSON 接口 `https://weibo.com/ajax/side/hotSearch`，失败时回退到微博页面解析，再失败才回退到知乎热榜 JSON。
 - 摘要是基于热搜标题生成的保守概括，不应当当作完整新闻事实摘要。
 - 定时更新不会再往 `master` 产生新提交；只有你自己改代码并 push 时，仓库历史才会增加提交记录。
+- 当 AI 摘要不可用时，系统会优先使用抓取源自带的摘要内容；只有源数据没有摘要时，才退回规则生成。
