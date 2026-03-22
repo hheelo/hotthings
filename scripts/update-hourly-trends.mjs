@@ -258,22 +258,22 @@ const fetchWeiboHotSearch = async () => {
 
 const fetchHotSearch = async () => {
   try {
-    const items = await fetchZhihuHotSearch();
+    const items = await fetchWeiboHotSearch();
     return {
-      platform: "知乎热榜",
+      platform: "微博热搜",
       items
     };
-  } catch (zhihuError) {
+  } catch (weiboError) {
     process.stderr.write(
-      `Zhihu fetch failed, falling back to Weibo: ${
-        zhihuError instanceof Error ? zhihuError.message : String(zhihuError)
+      `Weibo fetch failed, falling back to Zhihu: ${
+        weiboError instanceof Error ? weiboError.message : String(weiboError)
       }\n`
     );
   }
 
-  const items = await fetchWeiboHotSearch();
+  const items = await fetchZhihuHotSearch();
   return {
-    platform: "微博热搜",
+    platform: "知乎热榜",
     items
   };
 };
