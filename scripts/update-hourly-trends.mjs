@@ -12,6 +12,7 @@ const MAX_HOURS = Number.parseInt(process.env.MAX_HOURS || "24", 10);
 const MAX_ITEMS = Number.parseInt(process.env.MAX_ITEMS || "20", 10);
 const OPENAI_BASE_URL = process.env.OPENAI_BASE_URL || "https://api.openai.com/v1";
 const OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-5-mini";
+const OPENAI_RETRY_ATTEMPTS = Number.parseInt(process.env.OPENAI_RETRY_ATTEMPTS || "3", 10);
 
 const now = new Date();
 
@@ -122,6 +123,10 @@ const fallbackHourSummary = (items) => {
   const joined = categories.join("、") || "综合";
   return `这一小时热搜主要集中在${joined}话题，用户更关注最新进展、事件影响和可快速理解的背景信息。`;
 };
+
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+const shouldRetryOpenAIStatus = (status) => status === 408 || status === 409 || status === 429 || status >= 500;
 
 const buildWeiboTopicUrl = (title, rank) => {
   const query = encodeURIComponent(title);
@@ -430,21 +435,57 @@ const summarizeWithOpenAI = async (items) => {
   }
 
   const responsesUrl = new URL("responses", OPENAI_BASE_URL.endsWith("/") ? OPENAI_BASE_URL : `${OPENAI_BASE_URL}/`);
-  const response = await fetch(responsesUrl, {
-    method: "POST",
-    headers: {
-      "content-type": "application/json",
-      authorization: `Bearer ${apiKey}`
-    },
-    body: JSON.stringify(buildSummaryPrompt(items))
-  });
+  let payload;
 
-  if (!response.ok) {
-    const errorText = await response.text();
-    throw new Error(`OpenAI Responses API failed: HTTP ${response.status} ${errorText}`);
+  for (let attempt = 1; attempt <= OPENAI_RETRY_ATTEMPTS; attempt += 1) {
+    let response;
+
+    try {
+      response = await fetch(responsesUrl, {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+          authorization: `Bearer ${apiKey}`
+        },
+        body: JSON.stringify(buildSummaryPrompt(items))
+      });
+    } catch (error) {
+      if (attempt === OPENAI_RETRY_ATTEMPTS) {
+        throw error;
+      }
+
+      const delayMs = attempt * 2000;
+      process.stderr.write(
+        `OpenAI request failed on attempt ${attempt}/${OPENAI_RETRY_ATTEMPTS}, retrying in ${delayMs}ms.\n`
+      );
+      await sleep(delayMs);
+      continue;
+    }
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      const message = `OpenAI Responses API failed: HTTP ${response.status} ${errorText}`;
+
+      if (!shouldRetryOpenAIStatus(response.status) || attempt === OPENAI_RETRY_ATTEMPTS) {
+        throw new Error(message);
+      }
+
+      const delayMs = attempt * 2000;
+      process.stderr.write(
+        `${message}\nRetrying in ${delayMs}ms (${attempt}/${OPENAI_RETRY_ATTEMPTS}).\n`
+      );
+      await sleep(delayMs);
+      continue;
+    }
+
+    payload = await response.json();
+    break;
   }
 
-  const payload = await response.json();
+  if (!payload) {
+    throw new Error("OpenAI response payload was empty after retries.");
+  }
+
   const outputText =
     payload.output_text ||
     payload.output

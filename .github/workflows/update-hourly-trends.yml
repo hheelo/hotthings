@@ -25,6 +25,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_BASE_URL: ${{ vars.OPENAI_BASE_URL }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+          OPENAI_RETRY_ATTEMPTS: ${{ vars.OPENAI_RETRY_ATTEMPTS }}
           MAX_HOURS: "24"
           MAX_ITEMS: "20"
         run: node ./scripts/update-hourly-trends.mjs
