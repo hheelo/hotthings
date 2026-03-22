@@ -240,7 +240,7 @@ const loadTrendData = async () => {
   renderLoading("正在读取数据文件…");
 
   try {
-    const response = await fetch("./data/hourly-trends.json", { cache: "no-store" });
+    const response = await fetch(`./data/hourly-trends.json?t=${Date.now()}`, { cache: "no-store" });
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}`);
     }
