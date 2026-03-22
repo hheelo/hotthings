@@ -72,6 +72,11 @@ const stripTags = (value) =>
 
 const decodeUrl = (value) => value.replace(/&amp;/g, "&");
 
+const normalizeHeat = (value) => {
+  const cleaned = stripTags(value || "");
+  return cleaned || "热议中";
+};
+
 const inferCategory = (title) => {
   const rules = [
     ["天气", "天气"],
@@ -109,6 +114,66 @@ const fallbackHourSummary = (items) => {
   return `这一小时热搜主要集中在${joined}话题，用户更关注最新进展、事件影响和可快速理解的背景信息。`;
 };
 
+const parseWeiboRows = (html) => {
+  const rows = [...html.matchAll(/<td class="td-02">([\s\S]*?)<\/td>/g)];
+  const items = [];
+
+  for (const rowMatch of rows) {
+    const rowHtml = rowMatch[1];
+    const titleMatch = rowHtml.match(/<a href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/);
+    if (!titleMatch) continue;
+
+    const title = stripTags(titleMatch[2]);
+    if (!title || title.includes("查看更多")) continue;
+
+    const heatMatch = rowHtml.match(/<span>([\dA-Za-z.+万亿]+)<\/span>/);
+    const href = titleMatch[1].startsWith("http")
+      ? titleMatch[1]
+      : `https://s.weibo.com${decodeUrl(titleMatch[1])}`;
+
+    items.push({
+      title,
+      desc: "",
+      category: inferCategory(title),
+      heat: normalizeHeat(heatMatch?.[1]),
+      url: href
+    });
+
+    if (items.length >= MAX_ITEMS) break;
+  }
+
+  return items;
+};
+
+const parseWeiboLinksFallback = (html) => {
+  const items = [];
+  const linkMatches = [
+    ...html.matchAll(/<a[^>]+href="(\/weibo\?q=[^"]+|https:\/\/s\.weibo\.com\/weibo\?q=[^"]+)"[^>]*>([\s\S]*?)<\/a>/g)
+  ];
+
+  for (const match of linkMatches) {
+    const href = match[1].startsWith("http") ? match[1] : `https://s.weibo.com${decodeUrl(match[1])}`;
+    const title = stripTags(match[2]);
+    if (!title) continue;
+    if (title.length < 2) continue;
+    if (title.includes("更多")) continue;
+    if (title.includes("微博")) continue;
+    if (items.some((item) => item.title === title)) continue;
+
+    items.push({
+      title,
+      desc: "",
+      category: inferCategory(title),
+      heat: "热议中",
+      url: href
+    });
+
+    if (items.length >= MAX_ITEMS) break;
+  }
+
+  return items;
+};
+
 const fetchWeiboHotSearch = async () => {
   const response = await fetch(SOURCE_URL, {
     headers: {
@@ -122,39 +187,13 @@ const fetchWeiboHotSearch = async () => {
   }
 
   const html = await response.text();
-  const rows = [...html.matchAll(/<td class="td-02">([\s\S]*?)<\/td>/g)];
-  const items = [];
+  const items = parseWeiboRows(html);
+  if (items.length) return items;
 
-  for (const rowMatch of rows) {
-    const rowHtml = rowMatch[1];
-    const titleMatch = rowHtml.match(/<a href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/);
-    if (!titleMatch) continue;
+  const fallbackItems = parseWeiboLinksFallback(html);
+  if (fallbackItems.length) return fallbackItems;
 
-    const title = stripTags(titleMatch[2]);
-    if (!title || title.includes("查看更多")) continue;
-
-    const heatMatch = rowHtml.match(/<span>([\dA-Za-z.+万亿]+)<\/span>/);
-    const rawHeat = heatMatch ? stripTags(heatMatch[1]) : "热议中";
-    const href = titleMatch[1].startsWith("http")
-      ? titleMatch[1]
-      : `https://s.weibo.com${decodeUrl(titleMatch[1])}`;
-
-    items.push({
-      title,
-      desc: "",
-      category: inferCategory(title),
-      heat: rawHeat,
-      url: href
-    });
-
-    if (items.length >= MAX_ITEMS) break;
-  }
-
-  if (!items.length) {
-    throw new Error("No hot-search items parsed from Weibo HTML.");
-  }
-
-  return items;
+  throw new Error("No hot-search items parsed from Weibo HTML.");
 };
 
 const buildSummaryPrompt = (items) => ({
@@ -298,13 +337,43 @@ const readExistingData = async () => {
   }
 };
 
+const hasEntryForCurrentSlot = (payload, slot) =>
+  Boolean((payload.hours || []).find((entry) => (entry.slot || entry.hour) === slot));
+
 const writeData = async (payload) => {
   await fs.mkdir(path.dirname(DATA_PATH), { recursive: true });
   await fs.writeFile(DATA_PATH, `${JSON.stringify(payload, null, 2)}\n`, "utf8");
 };
 
 const main = async () => {
-  const fetchedItems = await fetchWeiboHotSearch();
+  const existing = await readExistingData();
+  let fetchedItems;
+
+  try {
+    fetchedItems = await fetchWeiboHotSearch();
+  } catch (error) {
+    const slot = toSlotString(slotTime);
+    if (hasEntryForCurrentSlot(existing, slot)) {
+      process.stderr.write(
+        `Fetch failed but current slot ${slot} already exists, keeping existing data: ${
+          error instanceof Error ? error.message : String(error)
+        }\n`
+      );
+      return;
+    }
+
+    if ((existing.hours || []).length > 0) {
+      process.stderr.write(
+        `Fetch failed, preserving previous data without updating current slot: ${
+          error instanceof Error ? error.message : String(error)
+        }\n`
+      );
+      return;
+    }
+
+    throw error;
+  }
+
   let summaryResult;
 
   try {
@@ -324,8 +393,6 @@ const main = async () => {
       }))
     };
   }
-
-  const existing = await readExistingData();
 
   const slot = toSlotString(slotTime);
   const nextEntry = {
