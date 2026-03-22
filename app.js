@@ -166,10 +166,7 @@ const getDayTimelineEntries = (dayKey) => {
   const isToday = dayKey === todayKey;
   const currentHour = new Date().getHours();
   const hourOrder = isToday
-    ? [
-        ...Array.from({ length: currentHour + 1 }, (_, index) => currentHour - index),
-        ...Array.from({ length: 23 - currentHour }, (_, index) => 23 - index)
-      ]
+    ? Array.from({ length: currentHour + 1 }, (_, index) => currentHour - index)
     : Array.from({ length: 24 }, (_, index) => 23 - index);
   const entries = [];
 
@@ -195,8 +192,7 @@ const getDayTimelineEntries = (dayKey) => {
         }).format(slotDate),
         summary: "",
         items: [],
-        isMissing: true,
-        isFuture: isToday && hour > currentHour
+        isMissing: true
       }
     );
   });
@@ -241,9 +237,6 @@ const renderTimeline = () => {
     button.innerHTML = `<span>${getShortLabel(entry)}</span><span>${entry.isMissing ? "暂无" : `${entry.items.length} 条`}</span>`;
     if (entry.isMissing) {
       button.classList.add("timeline-button-muted");
-    }
-    if (entry.isFuture) {
-      button.classList.add("timeline-button-future");
     }
     button.addEventListener("click", () => {
       state.activeHour = entryKey;
