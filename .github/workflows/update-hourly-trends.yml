@@ -46,28 +46,36 @@ jobs:
 
       - name: Persist latest hourly trends to data branch
         run: |
-          mkdir -p /tmp/hotthings-data-branch
-          cp ./data/hourly-trends.json /tmp/hotthings-data-branch/hourly-trends.json
-          git fetch origin "${DATA_BRANCH}:${DATA_BRANCH}" || true
-          if git show-ref --verify --quiet "refs/heads/${DATA_BRANCH}"; then
-            git switch "${DATA_BRANCH}"
+          DATA_FILE_TMP="/tmp/hourly-trends.json"
+          DATA_WORKTREE="/tmp/hotthings-data-worktree"
+          cp ./data/hourly-trends.json "${DATA_FILE_TMP}"
+          rm -rf "${DATA_WORKTREE}"
+          git fetch origin "${DATA_BRANCH}" || true
+          if git show-ref --verify --quiet "refs/remotes/origin/${DATA_BRANCH}"; then
+            git worktree add "${DATA_WORKTREE}" "origin/${DATA_BRANCH}"
           else
-            git switch --orphan "${DATA_BRANCH}"
-            git rm -rf . >/dev/null 2>&1 || true
+            git worktree add --detach "${DATA_WORKTREE}" HEAD
+            (
+              cd "${DATA_WORKTREE}"
+              git checkout --orphan "${DATA_BRANCH}"
+              git rm -rf . >/dev/null 2>&1 || true
+            )
           fi
-          mkdir -p data
-          cp /tmp/hotthings-data-branch/hourly-trends.json ./data/hourly-trends.json
-          git add data/hourly-trends.json
-          if git diff --cached --quiet; then
-            echo "No data changes to persist."
-            git switch "${CODE_BRANCH}"
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Update hourly hot search data"
-          git push origin "${DATA_BRANCH}"
-          git switch "${CODE_BRANCH}"
+          mkdir -p "${DATA_WORKTREE}/data"
+          cp "${DATA_FILE_TMP}" "${DATA_WORKTREE}/data/hourly-trends.json"
+          (
+            cd "${DATA_WORKTREE}"
+            git add data/hourly-trends.json
+            if git diff --cached --quiet; then
+              echo "No data changes to persist."
+              exit 0
+            fi
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Update hourly hot search data"
+            git push origin HEAD:${DATA_BRANCH}
+          )
+          git worktree remove "${DATA_WORKTREE}" --force
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
