@@ -3,7 +3,9 @@ const fallbackPayload = {
   updatedAt: "2026-03-22T23:40:00+08:00",
   hours: [
     {
-      hour: "20:00",
+      slot: "2026-03-22T20:00:00+08:00",
+      label: "03-22 20:00",
+      shortLabel: "20:00",
       summary: "黄金时段热搜进入全天峰值，娱乐、社会、科技三类内容的讨论同时活跃。",
       items: [
         {
@@ -67,12 +69,11 @@ const formatDataTime = (value) => {
   }).format(date);
 };
 
-const pickInitialHour = (hours) => {
-  const currentHour = new Date().getHours();
-  const rounded = `${String(currentHour).padStart(2, "0")}:00`;
-  const matched = hours.find((entry) => entry.hour === rounded);
-  return matched?.hour || hours[0]?.hour || "20:00";
-};
+const getEntryKey = (entry) => entry.slot || entry.hour || entry.label;
+const getShortLabel = (entry) => entry.shortLabel || entry.hour || "--:--";
+const getFullLabel = (entry) => entry.label || entry.hour || "未知时段";
+
+const pickInitialHour = (hours) => hours[0] ? getEntryKey(hours[0]) : "20:00";
 
 const getHours = () => state.payload.hours || [];
 
@@ -91,11 +92,12 @@ const renderTimeline = () => {
 
   getHours().forEach((entry) => {
     const button = timelineButtonTemplate.content.firstElementChild.cloneNode(true);
-    button.dataset.hour = entry.hour;
-    button.setAttribute("aria-selected", String(entry.hour === state.activeHour));
-    button.innerHTML = `<span>${entry.hour}</span><span>${entry.items.length} 条</span>`;
+    const entryKey = getEntryKey(entry);
+    button.dataset.hour = entryKey;
+    button.setAttribute("aria-selected", String(entryKey === state.activeHour));
+    button.innerHTML = `<span>${getShortLabel(entry)}</span><span>${entry.items.length} 条</span>`;
     button.addEventListener("click", () => {
-      state.activeHour = entry.hour;
+      state.activeHour = entryKey;
       renderTimeline();
       renderCards();
     });
@@ -105,14 +107,14 @@ const renderTimeline = () => {
 
 const renderCards = () => {
   const hours = getHours();
-  const entry = hours.find((item) => item.hour === state.activeHour) || hours[0];
+  const entry = hours.find((item) => getEntryKey(item) === state.activeHour) || hours[0];
 
   if (!entry) {
     renderLoading("没有可展示的热搜数据。");
     return;
   }
 
-  activeHourTitle.textContent = `${entry.hour} 热搜`;
+  activeHourTitle.textContent = `${getFullLabel(entry)} 热搜`;
   activeHourSummary.textContent = entry.summary;
   timeCaption.textContent = `最近刷新：${formatNow()}`;
   updateBadge.textContent = state.payload.source || "未标注来源";

@@ -8,27 +8,67 @@
 - `styles.css`: 移动端优先样式
 - `app.js`: 数据加载、时间轴切换、刷新与回退逻辑
 - `data/hourly-trends.json`: 当前热搜数据源
+- `scripts/update-hourly-trends.mjs`: 抓取真实热搜并生成摘要
+- `.github/workflows/update-hourly-trends.yml`: 每小时自动更新数据
+- `.github/workflows/deploy-pages.yml`: 自动部署到 GitHub Pages
 - `manifest.webmanifest`: PWA 配置
 - `sw.js`: 离线缓存
 
-## 如何替换成真实数据
+## 真实数据链路
+
+默认方案是：
+
+1. GitHub Actions 每小时抓取微博热搜页面
+2. 用 OpenAI Responses API 生成整体概括和每条简要概括
+3. 写入 `data/hourly-trends.json`
+4. GitHub Pages 自动发布静态站点
+
+如果没有配置 `OPENAI_API_KEY`，脚本仍可运行，但会退回到规则生成的保守摘要。
+
+## 本地运行数据脚本
+
+```bash
+OPENAI_API_KEY=your_key_here node ./scripts/update-hourly-trends.mjs
+```
+
+可选环境变量：
+
+- `OPENAI_MODEL`: 默认 `gpt-5-mini`
+- `MAX_HOURS`: 默认保留最近 `24` 个整点
+- `MAX_ITEMS`: 默认抓取每小时前 `10` 条
+
+## GitHub 需要配置
+
+仓库 `Settings -> Secrets and variables -> Actions`：
+
+- Secret: `OPENAI_API_KEY`
+- Variable: `OPENAI_MODEL`，建议填 `gpt-5-mini`
+
+仓库 `Settings -> Pages`：
+
+- Build and deployment: `GitHub Actions`
+
+## 数据格式
 
 把 `data/hourly-trends.json` 按下面格式更新即可：
 
 ```json
 {
-  "source": "微博热搜",
+  "source": "微博热搜 + OpenAI摘要",
   "updatedAt": "2026-03-22T23:40:00+08:00",
   "hours": [
     {
-      "hour": "20:00",
+      "slot": "2026-03-22T20:00:00+08:00",
+      "label": "03-22 20:00",
+      "shortLabel": "20:00",
       "summary": "这一小时的总体概括。",
       "items": [
         {
           "title": "热搜标题",
           "desc": "简要概括",
           "category": "分类",
-          "heat": "149k"
+          "heat": "149k",
+          "url": "https://example.com/topic"
         }
       ]
     }
@@ -36,11 +76,7 @@
 }
 ```
 
-## 下一步建议
+## 说明
 
-如果要真正自动化，建议再加一个后端或定时脚本：
-
-1. 从真实热搜源抓取每小时榜单
-2. 用大模型为每条标题生成简要概括
-3. 定时写入 `data/hourly-trends.json`
-4. 前端继续直接读取这个 JSON
+- 当前抓取源默认是微博热搜页面 HTML，页面结构变更时需要调整解析规则。
+- 摘要是基于热搜标题生成的保守概括，不应当当作完整新闻事实摘要。
