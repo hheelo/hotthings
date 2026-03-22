@@ -124,7 +124,8 @@ h2 {
 .card-desc,
 .time-caption,
 .data-hint,
-.loading-copy {
+.loading-copy,
+.day-hint {
   color: var(--muted);
 }
 
@@ -170,6 +171,51 @@ h2 {
   font-size: 0.92rem;
 }
 
+.timeline-toolbar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.9rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.day-nav-button {
+  width: 2.8rem;
+  height: 2.8rem;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 248, 240, 0.9);
+  color: var(--accent-deep);
+  font-size: 1.1rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.day-nav-button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.day-summary {
+  min-width: 0;
+}
+
+.day-label,
+.day-hint {
+  margin: 0;
+}
+
+.day-label {
+  font-family: "Noto Serif SC", serif;
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+.day-hint {
+  margin-top: 0.15rem;
+  font-size: 0.84rem;
+}
+
 .timeline {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -211,6 +257,10 @@ h2 {
 
 .timeline-button-muted span:last-child {
   color: rgba(112, 95, 83, 0.72);
+}
+
+.timeline-button-future {
+  opacity: 0.58;
 }
 
 .badge,

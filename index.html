@@ -48,6 +48,18 @@
           </div>
           <p id="timeCaption" class="time-caption"></p>
         </div>
+        <div class="timeline-toolbar" aria-label="日期切换">
+          <button id="prevDayButton" class="day-nav-button" type="button" aria-label="查看更早一天">
+            ←
+          </button>
+          <div class="day-summary">
+            <p id="activeDayLabel" class="day-label">今天</p>
+            <p id="activeDayHint" class="day-hint">按 24 小时查看，最新时间排在最前</p>
+          </div>
+          <button id="nextDayButton" class="day-nav-button" type="button" aria-label="查看更新一天">
+            →
+          </button>
+        </div>
         <div id="timeline" class="timeline" role="tablist" aria-label="每小时热搜时间轴"></div>
       </section>
 

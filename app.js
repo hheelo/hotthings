@@ -33,6 +33,7 @@ const fallbackPayload = {
 
 const state = {
   activeHour: "20:00",
+  activeDay: "",
   payload: fallbackPayload
 };
 
@@ -44,6 +45,10 @@ const timeCaption = document.querySelector("#timeCaption");
 const updateBadge = document.querySelector("#updateBadge");
 const dataHint = document.querySelector("#dataHint");
 const refreshButton = document.querySelector("#refreshButton");
+const prevDayButton = document.querySelector("#prevDayButton");
+const nextDayButton = document.querySelector("#nextDayButton");
+const activeDayLabel = document.querySelector("#activeDayLabel");
+const activeDayHint = document.querySelector("#activeDayHint");
 const timelineButtonTemplate = document.querySelector("#timelineButtonTemplate");
 const cardTemplate = document.querySelector("#cardTemplate");
 
@@ -83,6 +88,41 @@ const isSafeUrl = (value) => {
   }
 };
 
+const getDayKey = (date) => {
+  const copy = new Date(date);
+  return `${copy.getFullYear()}-${String(copy.getMonth() + 1).padStart(2, "0")}-${String(copy.getDate()).padStart(2, "0")}`;
+};
+
+const getTodayKey = () => getDayKey(new Date());
+const getEntryDayKey = (entry) => getDayKey(new Date(getEntryKey(entry)));
+
+const formatDayTitle = (dayKey) => {
+  const [year, month, day] = dayKey.split("-").map(Number);
+  const date = new Date(year, month - 1, day);
+  const todayKey = getTodayKey();
+  const yesterday = new Date();
+  yesterday.setDate(yesterday.getDate() - 1);
+  const yesterdayKey = getDayKey(yesterday);
+
+  if (dayKey === todayKey) return "今天";
+  if (dayKey === yesterdayKey) return "昨天";
+
+  return new Intl.DateTimeFormat("zh-CN", {
+    month: "long",
+    day: "numeric",
+    weekday: "short"
+  }).format(date);
+};
+
+const getDayHintText = (dayKey) =>
+  dayKey === getTodayKey() ? "今天按最新时间倒序显示" : "该日期按 23:00 到 00:00 倒序显示";
+
+const getAvailableDayKeys = (hours) => {
+  const dayKeys = new Set([getTodayKey()]);
+  hours.forEach((entry) => dayKeys.add(getEntryDayKey(entry)));
+  return [...dayKeys].sort((left, right) => right.localeCompare(left));
+};
+
 const pickInitialHour = (hours) => {
   if (!hours[0]) return "20:00";
 
@@ -115,14 +155,22 @@ const getSlotIso = (date) => {
   return `${year}-${month}-${day}T${hours}:00:00${sign}${offsetHours}:${offsetMins}`;
 };
 
-const getHourlyTimelineEntries = () => {
+const getDayTimelineEntries = (dayKey) => {
   const hoursMap = getHoursMap();
-  const base = new Date();
-  base.setMinutes(0, 0, 0);
+  const [year, month, day] = dayKey.split("-").map(Number);
+  const todayKey = getTodayKey();
+  const isToday = dayKey === todayKey;
+  const currentHour = new Date().getHours();
+  const hourOrder = isToday
+    ? [
+        ...Array.from({ length: currentHour + 1 }, (_, index) => currentHour - index),
+        ...Array.from({ length: 23 - currentHour }, (_, index) => 23 - index)
+      ]
+    : Array.from({ length: 24 }, (_, index) => 23 - index);
   const entries = [];
 
-  for (let index = 0; index < 24; index += 1) {
-    const slotDate = shiftHour(base, -index);
+  hourOrder.forEach((hour) => {
+    const slotDate = new Date(year, month - 1, day, hour, 0, 0, 0);
     const slot = getSlotIso(slotDate);
     const existing = hoursMap.get(slot);
 
@@ -143,10 +191,11 @@ const getHourlyTimelineEntries = () => {
         }).format(slotDate),
         summary: "",
         items: [],
-        isMissing: true
+        isMissing: true,
+        isFuture: isToday && hour > currentHour
       }
     );
-  }
+  });
 
   return entries;
 };
@@ -163,8 +212,15 @@ const renderLoading = (message) => {
 
 const renderTimeline = () => {
   timeline.innerHTML = "";
+  const dayKeys = getAvailableDayKeys(getHours());
+  const activeDayIndex = dayKeys.indexOf(state.activeDay);
 
-  getHourlyTimelineEntries().forEach((entry) => {
+  activeDayLabel.textContent = formatDayTitle(state.activeDay);
+  activeDayHint.textContent = getDayHintText(state.activeDay);
+  prevDayButton.disabled = activeDayIndex === dayKeys.length - 1;
+  nextDayButton.disabled = activeDayIndex <= 0;
+
+  getDayTimelineEntries(state.activeDay).forEach((entry) => {
     const button = timelineButtonTemplate.content.firstElementChild.cloneNode(true);
     const entryKey = getEntryKey(entry);
     button.dataset.hour = entryKey;
@@ -172,6 +228,9 @@ const renderTimeline = () => {
     button.innerHTML = `<span>${getShortLabel(entry)}</span><span>${entry.isMissing ? "暂无" : `${entry.items.length} 条`}</span>`;
     if (entry.isMissing) {
       button.classList.add("timeline-button-muted");
+    }
+    if (entry.isFuture) {
+      button.classList.add("timeline-button-future");
     }
     button.addEventListener("click", () => {
       state.activeHour = entryKey;
@@ -183,7 +242,7 @@ const renderTimeline = () => {
 };
 
 const renderCards = () => {
-  const entry = getHourlyTimelineEntries().find((item) => getEntryKey(item) === state.activeHour);
+  const entry = getDayTimelineEntries(state.activeDay).find((item) => getEntryKey(item) === state.activeHour);
 
   if (!entry) {
     renderLoading("没有可展示的热搜数据。");
@@ -231,7 +290,25 @@ const renderCards = () => {
 
 const applyPayload = (payload) => {
   state.payload = payload?.hours?.length ? payload : fallbackPayload;
-  state.activeHour = pickInitialHour(getHours());
+  const hours = getHours();
+  const dayKeys = getAvailableDayKeys(hours);
+  state.activeDay = dayKeys[0] || getTodayKey();
+  state.activeHour = pickInitialHour(hours);
+  renderTimeline();
+  renderCards();
+};
+
+const moveDay = (direction) => {
+  const dayKeys = getAvailableDayKeys(getHours());
+  const activeDayIndex = dayKeys.indexOf(state.activeDay);
+  const nextIndex = activeDayIndex + direction;
+  const nextDay = dayKeys[nextIndex];
+
+  if (!nextDay) return;
+
+  state.activeDay = nextDay;
+  const nextEntries = getDayTimelineEntries(state.activeDay);
+  state.activeHour = getEntryKey(nextEntries[0]);
   renderTimeline();
   renderCards();
 };
@@ -261,6 +338,9 @@ refreshButton.addEventListener("click", async () => {
     refreshButton.textContent = "刷新摘要";
   }, 1200);
 });
+
+prevDayButton.addEventListener("click", () => moveDay(1));
+nextDayButton.addEventListener("click", () => moveDay(-1));
 
 loadTrendData();
 
