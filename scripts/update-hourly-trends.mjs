@@ -4,7 +4,8 @@ import process from "node:process";
 
 const ROOT_DIR = process.cwd();
 const DATA_PATH = path.join(ROOT_DIR, "data", "hourly-trends.json");
-const SOURCE_URL = "https://s.weibo.com/top/summary?cate=realtimehot";
+const ZHIHU_SOURCE_URL = "https://api.zhihu.com/topstory/hot-list";
+const WEIBO_SOURCE_URL = "https://s.weibo.com/top/summary?cate=realtimehot";
 const TIMEZONE = "Asia/Shanghai";
 const MAX_HOURS = Number.parseInt(process.env.MAX_HOURS || "24", 10);
 const MAX_ITEMS = Number.parseInt(process.env.MAX_ITEMS || "20", 10);
@@ -77,6 +78,12 @@ const normalizeHeat = (value) => {
   return cleaned || "热议中";
 };
 
+const truncateText = (value, maxLength) => {
+  const cleaned = stripTags(value || "").replace(/\s+/g, " ").trim();
+  if (!cleaned) return "";
+  return cleaned.length > maxLength ? `${cleaned.slice(0, maxLength - 1)}…` : cleaned;
+};
+
 const inferCategory = (title) => {
   const rules = [
     ["天气", "天气"],
@@ -112,6 +119,59 @@ const fallbackHourSummary = (items) => {
   const categories = [...new Set(items.map((item) => item.category))].slice(0, 3);
   const joined = categories.join("、") || "综合";
   return `这一小时热搜主要集中在${joined}话题，用户更关注最新进展、事件影响和可快速理解的背景信息。`;
+};
+
+const fetchZhihuHotSearch = async () => {
+  const response = await fetch(ZHIHU_SOURCE_URL, {
+    headers: {
+      "user-agent": "Mozilla/5.0",
+      accept: "application/json,text/plain,*/*",
+      referer: "https://www.zhihu.com/hot"
+    }
+  });
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Zhihu hot list: HTTP ${response.status}`);
+  }
+
+  const payload = await response.json();
+  const data = Array.isArray(payload?.data) ? payload.data : [];
+  const items = data
+    .map((entry) => {
+      const target = entry?.target || {};
+      const title =
+        target?.titleArea?.text ||
+        target?.title ||
+        "";
+      const excerpt =
+        target?.excerptArea?.text ||
+        target?.excerpt ||
+        "";
+      const hot =
+        target?.metricsArea?.text ||
+        entry?.detail_text ||
+        "热议中";
+      const url =
+        target?.link?.url ||
+        target?.url ||
+        "";
+
+      return {
+        title: stripTags(title),
+        desc: truncateText(excerpt, 48),
+        category: inferCategory(stripTags(title)),
+        heat: normalizeHeat(hot),
+        url
+      };
+    })
+    .filter((item) => item.title)
+    .slice(0, MAX_ITEMS);
+
+  if (!items.length) {
+    throw new Error("No hot-search items parsed from Zhihu JSON.");
+  }
+
+  return items;
 };
 
 const parseWeiboRows = (html) => {
@@ -175,7 +235,7 @@ const parseWeiboLinksFallback = (html) => {
 };
 
 const fetchWeiboHotSearch = async () => {
-  const response = await fetch(SOURCE_URL, {
+  const response = await fetch(WEIBO_SOURCE_URL, {
     headers: {
       "user-agent": "Mozilla/5.0",
       accept: "text/html,application/xhtml+xml"
@@ -194,6 +254,28 @@ const fetchWeiboHotSearch = async () => {
   if (fallbackItems.length) return fallbackItems;
 
   throw new Error("No hot-search items parsed from Weibo HTML.");
+};
+
+const fetchHotSearch = async () => {
+  try {
+    const items = await fetchZhihuHotSearch();
+    return {
+      platform: "知乎热榜",
+      items
+    };
+  } catch (zhihuError) {
+    process.stderr.write(
+      `Zhihu fetch failed, falling back to Weibo: ${
+        zhihuError instanceof Error ? zhihuError.message : String(zhihuError)
+      }\n`
+    );
+  }
+
+  const items = await fetchWeiboHotSearch();
+  return {
+    platform: "微博热搜",
+    items
+  };
 };
 
 const buildSummaryPrompt = (items) => ({
@@ -275,11 +357,11 @@ const summarizeWithOpenAI = async (items) => {
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {
     return {
-      sourceLabel: "微博热搜 + 规则摘要",
+      sourceLabel: "热榜 + 规则摘要",
       hourSummary: fallbackHourSummary(items),
       items: items.map((item) => ({
         ...item,
-        desc: fallbackSummaryForTitle(item.title)
+        desc: item.desc || fallbackSummaryForTitle(item.title)
       }))
     };
   }
@@ -315,13 +397,13 @@ const summarizeWithOpenAI = async (items) => {
   const descByTitle = new Map(parsed.itemSummaries.map((item) => [item.title, item]));
 
   return {
-    sourceLabel: `微博热搜 + OpenAI摘要 (${OPENAI_MODEL})`,
+    sourceLabel: `热榜 + OpenAI摘要 (${OPENAI_MODEL})`,
     hourSummary: parsed.hourSummary,
     items: items.map((item) => {
       const summary = descByTitle.get(item.title);
       return {
         ...item,
-        desc: summary?.desc || fallbackSummaryForTitle(item.title),
+        desc: summary?.desc || item.desc || fallbackSummaryForTitle(item.title),
         category: summary?.category || item.category
       };
     })
@@ -347,10 +429,10 @@ const writeData = async (payload) => {
 
 const main = async () => {
   const existing = await readExistingData();
-  let fetchedItems;
+  let fetched;
 
   try {
-    fetchedItems = await fetchWeiboHotSearch();
+    fetched = await fetchHotSearch();
   } catch (error) {
     const slot = toSlotString(slotTime);
     if (hasEntryForCurrentSlot(existing, slot)) {
@@ -377,7 +459,7 @@ const main = async () => {
   let summaryResult;
 
   try {
-    summaryResult = await summarizeWithOpenAI(fetchedItems);
+    summaryResult = await summarizeWithOpenAI(fetched.items);
   } catch (error) {
     process.stderr.write(
       `OpenAI summarization failed, falling back to rule summaries: ${
@@ -385,11 +467,11 @@ const main = async () => {
       }\n`
     );
     summaryResult = {
-      sourceLabel: "微博热搜 + 规则摘要",
-      hourSummary: fallbackHourSummary(fetchedItems),
-      items: fetchedItems.map((item) => ({
+      sourceLabel: `${fetched.platform} + 规则摘要`,
+      hourSummary: fallbackHourSummary(fetched.items),
+      items: fetched.items.map((item) => ({
         ...item,
-        desc: fallbackSummaryForTitle(item.title)
+        desc: item.desc || fallbackSummaryForTitle(item.title)
       }))
     };
   }
@@ -412,7 +494,9 @@ const main = async () => {
   const preserved = (existing.hours || []).filter((entry) => (entry.slot || entry.hour) !== slot);
   const hours = [nextEntry, ...preserved].slice(0, MAX_HOURS);
   const output = {
-    source: summaryResult.sourceLabel,
+    source: summaryResult.sourceLabel.startsWith("热榜")
+      ? summaryResult.sourceLabel.replace("热榜", fetched.platform)
+      : summaryResult.sourceLabel,
     updatedAt: new Date().toISOString(),
     hours
   };
