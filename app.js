@@ -72,6 +72,16 @@ const formatDataTime = (value) => {
 const getEntryKey = (entry) => entry.slot || entry.hour || entry.label;
 const getShortLabel = (entry) => entry.shortLabel || entry.hour || "--:--";
 const getFullLabel = (entry) => entry.label || entry.hour || "未知时段";
+const isSafeUrl = (value) => {
+  if (!value) return false;
+
+  try {
+    const url = new URL(value, window.location.href);
+    return url.protocol === "http:" || url.protocol === "https:";
+  } catch {
+    return false;
+  }
+};
 
 const pickInitialHour = (hours) => hours[0] ? getEntryKey(hours[0]) : "20:00";
 
@@ -128,6 +138,20 @@ const renderCards = () => {
     card.querySelector(".card-desc").textContent = item.desc;
     card.querySelector(".meta-tag").textContent = item.category;
     card.querySelector(".meta-heat").textContent = `热度 ${item.heat}`;
+
+    if (isSafeUrl(item.url)) {
+      const link = document.createElement("a");
+      link.className = "card-link";
+      link.href = item.url;
+      link.target = "_blank";
+      link.rel = "noreferrer noopener";
+      link.setAttribute("aria-label", `打开话题：${item.title}`);
+      link.appendChild(card);
+      cards.appendChild(link);
+      return;
+    }
+
+    card.classList.add("card-static");
     cards.appendChild(card);
   });
 };
