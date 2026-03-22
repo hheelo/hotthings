@@ -260,7 +260,14 @@ const summarizeWithOpenAI = async (items) => {
   }
 
   const payload = await response.json();
-  const outputText = payload.output_text;
+  const outputText =
+    payload.output_text ||
+    payload.output
+      ?.flatMap((entry) => entry.content || [])
+      .filter((item) => item.type === "output_text")
+      .map((item) => item.text)
+      .join("");
+
   if (!outputText) {
     throw new Error("OpenAI response did not contain output_text.");
   }
@@ -298,7 +305,26 @@ const writeData = async (payload) => {
 
 const main = async () => {
   const fetchedItems = await fetchWeiboHotSearch();
-  const summaryResult = await summarizeWithOpenAI(fetchedItems);
+  let summaryResult;
+
+  try {
+    summaryResult = await summarizeWithOpenAI(fetchedItems);
+  } catch (error) {
+    process.stderr.write(
+      `OpenAI summarization failed, falling back to rule summaries: ${
+        error instanceof Error ? error.message : String(error)
+      }\n`
+    );
+    summaryResult = {
+      sourceLabel: "微博热搜 + 规则摘要",
+      hourSummary: fallbackHourSummary(fetchedItems),
+      items: fetchedItems.map((item) => ({
+        ...item,
+        desc: fallbackSummaryForTitle(item.title)
+      }))
+    };
+  }
+
   const existing = await readExistingData();
 
   const slot = toSlotString(slotTime);
