@@ -364,80 +364,61 @@ const fetchHotSearch = async () => {
   };
 };
 
-const buildSummaryPrompt = (items) => ({
-  model: OPENAI_MODEL,
-  reasoning: {
-    effort: "minimal"
-  },
-  max_output_tokens: 1200,
-  text: {
-    format: {
-      type: "json_schema",
-      name: "hourly_hot_search_summaries",
-      strict: true,
-      schema: {
-        type: "object",
-        additionalProperties: false,
-        properties: {
-          hourSummary: {
-            type: "string"
-          },
-          itemSummaries: {
-            type: "array",
-            items: {
-              type: "object",
-              additionalProperties: false,
-              properties: {
-                title: { type: "string" },
-                desc: { type: "string" },
-                category: { type: "string" }
-              },
-              required: ["title", "desc", "category"]
-            }
-          }
-        },
-        required: ["hourSummary", "itemSummaries"]
-      }
-    }
-  },
-  input: [
-    {
-      role: "system",
-      content: [
-        {
-          type: "input_text",
-          text:
-            "你是中文新闻编辑。只基于给定热搜标题生成简洁摘要，不要编造细节，不要引用未提供的事实来源。如果信息不足，就用更保守的表述，描述用户关注点、话题方向和事件状态。"
-        }
-      ]
-    },
-    {
-      role: "user",
-      content: [
-        {
-          type: "input_text",
-          text: JSON.stringify(
-            {
-              task: "为当前小时热搜生成 1 条整体概括和每条 1 句中文简要概括。",
-              constraints: {
-                hourSummaryMaxChars: 42,
-                itemDescMaxChars: 48,
-                descStyle: "中性、简洁、避免夸张",
-                categoryStyle: "2到4个中文字符"
-              },
-              items: items.map((item) => ({
-                title: item.title,
-                heat: item.heat
-              }))
-            },
-            null,
-            2
-          )
-        }
-      ]
-    }
-  ]
-});
+const buildSummaryPrompt = (items) => {
+  const itemLines = items
+    .map((item, index) => `${index + 1}. 标题：${item.title}；热度：${item.heat}`)
+    .join("\n");
+
+  return {
+    model: OPENAI_MODEL,
+    max_output_tokens: 1200,
+    input: `你是中文新闻编辑。只基于给定热搜标题生成简洁摘要，不要编造细节，不要引用未提供的事实来源。如果信息不足，就用更保守的表述，描述用户关注点、话题方向和事件状态。
+
+请严格按以下纯文本格式返回，不要输出 JSON，不要加解释：
+HOUR_SUMMARY: <一条整体概括，42字内>
+ITEM: <原标题> | <分类，2到4个中文字符> | <一句简要概括，48字内>
+
+需要处理的热搜如下：
+${itemLines}`
+  };
+};
+
+const parseSummaryText = (outputText, items) => {
+  const lines = outputText
+    .split("\n")
+    .map((line) => line.trim())
+    .filter(Boolean);
+
+  const hourSummaryLine = lines.find((line) => line.startsWith("HOUR_SUMMARY:"));
+  const hourSummary = hourSummaryLine
+    ? hourSummaryLine.replace("HOUR_SUMMARY:", "").trim()
+    : fallbackHourSummary(items);
+
+  const summaries = new Map();
+  lines
+    .filter((line) => line.startsWith("ITEM:"))
+    .forEach((line) => {
+      const payload = line.replace("ITEM:", "").trim();
+      const [titlePart, categoryPart, descPart] = payload.split("|").map((part) => part.trim());
+      if (!titlePart) return;
+      summaries.set(titlePart, {
+        category: categoryPart || "",
+        desc: descPart || ""
+      });
+    });
+
+  return {
+    hourSummary,
+    items: items.map((item) => {
+      const summary = summaries.get(item.title);
+      return {
+        ...item,
+        desc: summary?.desc || item.desc || fallbackSummaryForTitle(item.title),
+        category: summary?.category || item.category
+      };
+    })
+  };
+};
 
 const summarizeWithOpenAI = async (items) => {
   const apiKey = process.env.OPENAI_API_KEY;
@@ -516,20 +497,12 @@ const summarizeWithOpenAI = async (items) => {
     throw new Error("OpenAI response did not contain output_text.");
   }
 
-  const parsed = JSON.parse(outputText);
-  const descByTitle = new Map(parsed.itemSummaries.map((item) => [item.title, item]));
+  const parsed = parseSummaryText(outputText, items);
 
   return {
     sourceLabel: `热榜 + OpenAI摘要 (${OPENAI_MODEL})`,
     hourSummary: parsed.hourSummary,
-    items: items.map((item) => {
-      const summary = descByTitle.get(item.title);
-      return {
-        ...item,
-        desc: summary?.desc || item.desc || fallbackSummaryForTitle(item.title),
-        category: summary?.category || item.category
-      };
-    })
+    items: parsed.items
   };
 };
 
