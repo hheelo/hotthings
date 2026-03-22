@@ -1,0 +1,17 @@
+{
+  "name": "每时热搜",
+  "short_name": "热搜",
+  "description": "按小时查看热搜标题与简要概括的 iOS 友好型 Web App。",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f4efe7",
+  "theme_color": "#f4efe7",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "./icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

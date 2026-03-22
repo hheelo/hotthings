@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#f4efe7" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="每时热搜" />
+    <meta
+      name="description"
+      content="按小时查看热搜标题与简要概括，可添加到 iPhone 主屏幕。"
+    />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./icons/icon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>每时热搜</title>
+  </head>
+  <body>
+    <div class="bg-orb bg-orb-left"></div>
+    <div class="bg-orb bg-orb-right"></div>
+
+    <main class="app-shell">
+      <header class="hero">
+        <p class="eyebrow">Hourly Pulse</p>
+        <div class="hero-row">
+          <div>
+            <h1>每时热搜</h1>
+            <p class="hero-copy">
+              聚合每小时热搜话题，展示标题与简要概括。适配 iPhone，可添加到主屏幕独立打开。
+            </p>
+          </div>
+          <button id="refreshButton" class="ghost-button" type="button">刷新摘要</button>
+        </div>
+      </header>
+
+      <section class="panel panel-time" aria-labelledby="timelineTitle">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">时间轴</p>
+            <h2 id="timelineTitle">选择小时</h2>
+          </div>
+          <p id="timeCaption" class="time-caption"></p>
+        </div>
+        <div id="timeline" class="timeline" role="tablist" aria-label="每小时热搜时间轴"></div>
+      </section>
+
+      <section class="panel panel-summary">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Now Viewing</p>
+            <h2 id="activeHourTitle">20:00 热搜</h2>
+          </div>
+          <span id="updateBadge" class="badge">本地示例数据</span>
+        </div>
+        <p id="activeHourSummary" class="summary-copy"></p>
+        <p id="dataHint" class="data-hint"></p>
+      </section>
+
+      <section class="panel panel-list" aria-labelledby="listTitle">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Topics</p>
+            <h2 id="listTitle">热点标题与简概</h2>
+          </div>
+        </div>
+        <div id="cards" class="cards"></div>
+      </section>
+    </main>
+
+    <template id="timelineButtonTemplate">
+      <button class="timeline-button" type="button" role="tab" aria-selected="false"></button>
+    </template>
+
+    <template id="cardTemplate">
+      <article class="card">
+        <div class="card-rank"></div>
+        <div class="card-body">
+          <h3 class="card-title"></h3>
+          <p class="card-desc"></p>
+          <div class="card-meta">
+            <span class="meta-tag"></span>
+            <span class="meta-heat"></span>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>
