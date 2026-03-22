@@ -35,7 +35,7 @@ OPENAI_API_KEY=your_key_here node ./scripts/update-hourly-trends.mjs
 
 - `OPENAI_MODEL`: 默认 `gpt-5-mini`
 - `MAX_HOURS`: 默认保留最近 `24` 个整点
-- `MAX_ITEMS`: 默认抓取每小时前 `10` 条
+- `MAX_ITEMS`: 默认抓取每小时前 `20` 条
 
 ## GitHub 需要配置
 

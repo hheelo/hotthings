@@ -7,7 +7,7 @@ const DATA_PATH = path.join(ROOT_DIR, "data", "hourly-trends.json");
 const SOURCE_URL = "https://s.weibo.com/top/summary?cate=realtimehot";
 const TIMEZONE = "Asia/Shanghai";
 const MAX_HOURS = Number.parseInt(process.env.MAX_HOURS || "24", 10);
-const MAX_ITEMS = Number.parseInt(process.env.MAX_ITEMS || "10", 10);
+const MAX_ITEMS = Number.parseInt(process.env.MAX_ITEMS || "20", 10);
 const OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-5-mini";
 
 const now = new Date();
