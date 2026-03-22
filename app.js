@@ -83,9 +83,73 @@ const isSafeUrl = (value) => {
   }
 };
 
-const pickInitialHour = (hours) => hours[0] ? getEntryKey(hours[0]) : "20:00";
+const pickInitialHour = (hours) => {
+  if (!hours[0]) return "20:00";
+
+  const currentSlot = getSlotIso(new Date());
+  const matched = hours.find((entry) => getEntryKey(entry) === currentSlot);
+  return matched ? currentSlot : getEntryKey(hours[0]);
+};
 
 const getHours = () => state.payload.hours || [];
+const getHoursMap = () => new Map(getHours().map((entry) => [getEntryKey(entry), entry]));
+
+const shiftHour = (date, delta) => {
+  const copy = new Date(date);
+  copy.setHours(copy.getHours() + delta, 0, 0, 0);
+  return copy;
+};
+
+const getSlotIso = (date) => {
+  const copy = new Date(date);
+  copy.setMinutes(0, 0, 0);
+  const offsetMinutes = -copy.getTimezoneOffset();
+  const sign = offsetMinutes >= 0 ? "+" : "-";
+  const absOffset = Math.abs(offsetMinutes);
+  const offsetHours = String(Math.floor(absOffset / 60)).padStart(2, "0");
+  const offsetMins = String(absOffset % 60).padStart(2, "0");
+  const year = copy.getFullYear();
+  const month = String(copy.getMonth() + 1).padStart(2, "0");
+  const day = String(copy.getDate()).padStart(2, "0");
+  const hours = String(copy.getHours()).padStart(2, "0");
+  return `${year}-${month}-${day}T${hours}:00:00${sign}${offsetHours}:${offsetMins}`;
+};
+
+const getHourlyTimelineEntries = () => {
+  const hoursMap = getHoursMap();
+  const base = new Date();
+  base.setMinutes(0, 0, 0);
+  const entries = [];
+
+  for (let index = 0; index < 24; index += 1) {
+    const slotDate = shiftHour(base, -index);
+    const slot = getSlotIso(slotDate);
+    const existing = hoursMap.get(slot);
+
+    entries.push(
+      existing || {
+        slot,
+        label: new Intl.DateTimeFormat("zh-CN", {
+          month: "2-digit",
+          day: "2-digit",
+          hour: "2-digit",
+          minute: "2-digit",
+          hourCycle: "h23"
+        }).format(slotDate),
+        shortLabel: new Intl.DateTimeFormat("zh-CN", {
+          hour: "2-digit",
+          minute: "2-digit",
+          hourCycle: "h23"
+        }).format(slotDate),
+        summary: "",
+        items: [],
+        isMissing: true
+      }
+    );
+  }
+
+  return entries;
+};
 
 const renderLoading = (message) => {
   timeline.innerHTML = "";
@@ -100,12 +164,15 @@ const renderLoading = (message) => {
 const renderTimeline = () => {
   timeline.innerHTML = "";
 
-  getHours().forEach((entry) => {
+  getHourlyTimelineEntries().forEach((entry) => {
     const button = timelineButtonTemplate.content.firstElementChild.cloneNode(true);
     const entryKey = getEntryKey(entry);
     button.dataset.hour = entryKey;
     button.setAttribute("aria-selected", String(entryKey === state.activeHour));
-    button.innerHTML = `<span>${getShortLabel(entry)}</span><span>${entry.items.length} 条</span>`;
+    button.innerHTML = `<span>${getShortLabel(entry)}</span><span>${entry.isMissing ? "暂无" : `${entry.items.length} 条`}</span>`;
+    if (entry.isMissing) {
+      button.classList.add("timeline-button-muted");
+    }
     button.addEventListener("click", () => {
       state.activeHour = entryKey;
       renderTimeline();
@@ -116,8 +183,7 @@ const renderTimeline = () => {
 };
 
 const renderCards = () => {
-  const hours = getHours();
-  const entry = hours.find((item) => getEntryKey(item) === state.activeHour) || hours[0];
+  const entry = getHourlyTimelineEntries().find((item) => getEntryKey(item) === state.activeHour);
 
   if (!entry) {
     renderLoading("没有可展示的热搜数据。");
@@ -125,11 +191,18 @@ const renderCards = () => {
   }
 
   activeHourTitle.textContent = `${getFullLabel(entry)} 热搜`;
-  activeHourSummary.textContent = entry.summary;
+  activeHourSummary.textContent = entry.isMissing
+    ? "这一小时暂时没有抓取到热搜快照。数据会在后续整点更新后自动补齐。"
+    : entry.summary;
   timeCaption.textContent = `最近刷新：${formatNow()}`;
   updateBadge.textContent = state.payload.source || "未标注来源";
   dataHint.textContent = `数据更新时间：${formatDataTime(state.payload.updatedAt)}`;
   cards.innerHTML = "";
+
+  if (entry.isMissing) {
+    cards.innerHTML = '<div class="loading-card"><p class="loading-copy">该小时暂无快照，稍后会随着定时任务补齐。</p></div>';
+    return;
+  }
 
   entry.items.forEach((item, index) => {
     const card = cardTemplate.content.firstElementChild.cloneNode(true);
