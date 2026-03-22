@@ -23,6 +23,7 @@ jobs:
       - name: Generate latest hourly trends
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_BASE_URL: ${{ vars.OPENAI_BASE_URL }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
           MAX_HOURS: "24"
           MAX_ITEMS: "20"

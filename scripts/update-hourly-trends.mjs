@@ -10,6 +10,7 @@ const WEIBO_SOURCE_URL = "https://s.weibo.com/top/summary?cate=realtimehot";
 const TIMEZONE = "Asia/Shanghai";
 const MAX_HOURS = Number.parseInt(process.env.MAX_HOURS || "24", 10);
 const MAX_ITEMS = Number.parseInt(process.env.MAX_ITEMS || "20", 10);
+const OPENAI_BASE_URL = process.env.OPENAI_BASE_URL || "https://api.openai.com/v1";
 const OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-5-mini";
 
 const now = new Date();
@@ -428,7 +429,8 @@ const summarizeWithOpenAI = async (items) => {
     };
   }
 
-  const response = await fetch("https://api.openai.com/v1/responses", {
+  const responsesUrl = new URL("responses", OPENAI_BASE_URL.endsWith("/") ? OPENAI_BASE_URL : `${OPENAI_BASE_URL}/`);
+  const response = await fetch(responsesUrl, {
     method: "POST",
     headers: {
       "content-type": "application/json",

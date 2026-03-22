@@ -33,6 +33,7 @@ OPENAI_API_KEY=your_key_here node ./scripts/update-hourly-trends.mjs
 
 可选环境变量：
 
+- `OPENAI_BASE_URL`: 默认 `https://api.openai.com/v1`
 - `OPENAI_MODEL`: 默认 `gpt-5-mini`
 - `MAX_HOURS`: 默认保留最近 `24` 个整点
 - `MAX_ITEMS`: 默认抓取每小时前 `20` 条
@@ -42,6 +43,7 @@ OPENAI_API_KEY=your_key_here node ./scripts/update-hourly-trends.mjs
 仓库 `Settings -> Secrets and variables -> Actions`：
 
 - Secret: `OPENAI_API_KEY`
+- Variable: `OPENAI_BASE_URL`，默认可留空；如果你用兼容 OpenAI 协议的第三方服务，就填它提供的 API 基础地址，例如 `https://your-provider.example/v1`
 - Variable: `OPENAI_MODEL`，建议填 `gpt-5-mini`
 
 仓库 `Settings -> Pages`：
