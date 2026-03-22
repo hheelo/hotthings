@@ -216,6 +216,31 @@ h2 {
   font-size: 0.84rem;
 }
 
+.timeline-filter {
+  display: inline-flex;
+  gap: 0.5rem;
+  padding: 0.3rem;
+  margin-top: 0.85rem;
+  border-radius: 999px;
+  background: rgba(255, 248, 240, 0.9);
+}
+
+.filter-button {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.58rem 0.9rem;
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.filter-button[aria-selected="true"] {
+  background: linear-gradient(180deg, #fff0e5 0%, #ffd3b9 100%);
+  color: var(--accent-deep);
+}
+
 .timeline {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));

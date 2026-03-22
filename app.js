@@ -34,6 +34,7 @@ const fallbackPayload = {
 const state = {
   activeHour: "20:00",
   activeDay: "",
+  showOnlyFilledHours: true,
   payload: fallbackPayload
 };
 
@@ -49,6 +50,9 @@ const prevDayButton = document.querySelector("#prevDayButton");
 const nextDayButton = document.querySelector("#nextDayButton");
 const activeDayLabel = document.querySelector("#activeDayLabel");
 const activeDayHint = document.querySelector("#activeDayHint");
+const timelineFilter = document.querySelector("#timelineFilter");
+const filledHoursButton = document.querySelector("#filledHoursButton");
+const allHoursButton = document.querySelector("#allHoursButton");
 const timelineButtonTemplate = document.querySelector("#timelineButtonTemplate");
 const cardTemplate = document.querySelector("#cardTemplate");
 
@@ -214,13 +218,22 @@ const renderTimeline = () => {
   timeline.innerHTML = "";
   const dayKeys = getAvailableDayKeys(getHours());
   const activeDayIndex = dayKeys.indexOf(state.activeDay);
+  const isTodayPage = state.activeDay === getTodayKey();
+  const rawEntries = getDayTimelineEntries(state.activeDay);
+  const visibleEntries =
+    isTodayPage && state.showOnlyFilledHours
+      ? rawEntries.filter((entry) => !entry.isMissing)
+      : rawEntries;
 
   activeDayLabel.textContent = formatDayTitle(state.activeDay);
   activeDayHint.textContent = getDayHintText(state.activeDay);
   prevDayButton.disabled = activeDayIndex === dayKeys.length - 1;
   nextDayButton.disabled = activeDayIndex <= 0;
+  timelineFilter.hidden = !isTodayPage;
+  filledHoursButton.setAttribute("aria-selected", String(state.showOnlyFilledHours));
+  allHoursButton.setAttribute("aria-selected", String(!state.showOnlyFilledHours));
 
-  getDayTimelineEntries(state.activeDay).forEach((entry) => {
+  visibleEntries.forEach((entry) => {
     const button = timelineButtonTemplate.content.firstElementChild.cloneNode(true);
     const entryKey = getEntryKey(entry);
     button.dataset.hour = entryKey;
@@ -293,6 +306,7 @@ const applyPayload = (payload) => {
   const hours = getHours();
   const dayKeys = getAvailableDayKeys(hours);
   state.activeDay = dayKeys[0] || getTodayKey();
+  state.showOnlyFilledHours = true;
   state.activeHour = pickInitialHour(hours);
   renderTimeline();
   renderCards();
@@ -307,6 +321,7 @@ const moveDay = (direction) => {
   if (!nextDay) return;
 
   state.activeDay = nextDay;
+  state.showOnlyFilledHours = state.activeDay === getTodayKey();
   const nextEntries = getDayTimelineEntries(state.activeDay);
   state.activeHour = getEntryKey(nextEntries[0]);
   renderTimeline();
@@ -341,6 +356,21 @@ refreshButton.addEventListener("click", async () => {
 
 prevDayButton.addEventListener("click", () => moveDay(1));
 nextDayButton.addEventListener("click", () => moveDay(-1));
+filledHoursButton.addEventListener("click", () => {
+  state.showOnlyFilledHours = true;
+  const filledEntries = getDayTimelineEntries(state.activeDay).filter((entry) => !entry.isMissing);
+  if (filledEntries.length) {
+    state.activeHour = getEntryKey(filledEntries[0]);
+  }
+  renderTimeline();
+  renderCards();
+});
+allHoursButton.addEventListener("click", () => {
+  state.showOnlyFilledHours = false;
+  state.activeHour = getEntryKey(getDayTimelineEntries(state.activeDay)[0]);
+  renderTimeline();
+  renderCards();
+});
 
 loadTrendData();
 
