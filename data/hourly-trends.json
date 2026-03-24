@@ -1,152 +1,152 @@
 {
   "source": "微博热搜 + 规则摘要",
-  "updatedAt": "2026-03-24T22:37:40.910Z",
+  "updatedAt": "2026-03-24T23:37:30.263Z",
   "hours": [
     {
-      "slot": "2026-03-25T06:00:00+08:00",
-      "label": "03/25 06:00",
-      "shortLabel": "06:00",
-      "summary": "这一小时热搜主要集中在热议、娱乐话题，用户更关注最新进展、事件影响和可快速理解的背景信息。",
+      "slot": "2026-03-25T07:00:00+08:00",
+      "label": "03/25 07:00",
+      "shortLabel": "07:00",
+      "summary": "这一小时热搜主要集中在热议、娱乐、财经话题，用户更关注最新进展、事件影响和可快速理解的背景信息。",
       "items": [
         {
-          "title": "峰学蔚来总经理称学员员工权益均有保障 热",
-          "desc": "围绕“峰学蔚来总经理称学员员工权益均有保障 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "title": "高强度工作 不要运动 热",
+          "desc": "围绕“高强度工作 不要运动 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
           "category": "热议",
-          "heat": "647333",
-          "url": "https://s.weibo.com/weibo?q=%E5%B3%B0%E5%AD%A6%E8%94%9A%E6%9D%A5%E6%80%BB%E7%BB%8F%E7%90%86%E7%A7%B0%E5%AD%A6%E5%91%98%E5%91%98%E5%B7%A5%E6%9D%83%E7%9B%8A%E5%9D%87%E6%9C%89%E4%BF%9D%E9%9A%9C&t=31&band_rank=1&Refer=top"
+          "heat": "1105477",
+          "url": "https://s.weibo.com/weibo?q=%E9%AB%98%E5%BC%BA%E5%BA%A6%E5%B7%A5%E4%BD%9C%20%E4%B8%8D%E8%A6%81%E8%BF%90%E5%8A%A8&t=31&band_rank=1&Refer=top"
         },
         {
-          "title": "高强度工作 不要运动",
-          "desc": "围绕“高强度工作 不要运动”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "title": "运动性心源性猝死的典型画像 新",
+          "desc": "围绕“运动性心源性猝死的典型画像 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
           "category": "热议",
-          "heat": "376349",
-          "url": "https://s.weibo.com/weibo?q=%E9%AB%98%E5%BC%BA%E5%BA%A6%E5%B7%A5%E4%BD%9C%20%E4%B8%8D%E8%A6%81%E8%BF%90%E5%8A%A8&t=31&band_rank=1&Refer=top"
+          "heat": "736283",
+          "url": "https://s.weibo.com/weibo?q=%E8%BF%90%E5%8A%A8%E6%80%A7%E5%BF%83%E6%BA%90%E6%80%A7%E7%8C%9D%E6%AD%BB%E7%9A%84%E5%85%B8%E5%9E%8B%E7%94%BB%E5%83%8F&t=31&band_rank=1&Refer=top"
         },
         {
           "title": "太空加油站新进展",
           "desc": "围绕“太空加油站新进展”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
           "category": "热议",
-          "heat": "295681",
+          "heat": "545245",
           "url": "https://s.weibo.com/weibo?q=%E5%A4%AA%E7%A9%BA%E5%8A%A0%E6%B2%B9%E7%AB%99%E6%96%B0%E8%BF%9B%E5%B1%95&t=31&band_rank=2&Refer=top"
         },
         {
-          "title": "猝死前1小时身体的预警 热",
-          "desc": "围绕“猝死前1小时身体的预警 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "title": "峰学蔚来总经理称学员员工权益均有保障 热",
+          "desc": "围绕“峰学蔚来总经理称学员员工权益均有保障 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
           "category": "热议",
-          "heat": "270532",
-          "url": "https://s.weibo.com/weibo?q=%E7%8C%9D%E6%AD%BB%E5%89%8D1%E5%B0%8F%E6%97%B6%E8%BA%AB%E4%BD%93%E7%9A%84%E9%A2%84%E8%AD%A6&t=31&band_rank=3&Refer=top"
+          "heat": "526807",
+          "url": "https://s.weibo.com/weibo?q=%E5%B3%B0%E5%AD%A6%E8%94%9A%E6%9D%A5%E6%80%BB%E7%BB%8F%E7%90%86%E7%A7%B0%E5%AD%A6%E5%91%98%E5%91%98%E5%B7%A5%E6%9D%83%E7%9B%8A%E5%9D%87%E6%9C%89%E4%BF%9D%E9%9A%9C&t=31&band_rank=3&Refer=top"
         },
         {
           "title": "警惕嘴唇发紫可能是心肺重症信号",
           "desc": "围绕“警惕嘴唇发紫可能是心肺重症信号”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
           "category": "热议",
-          "heat": "182193",
+          "heat": "417759",
           "url": "https://s.weibo.com/weibo?q=%E8%AD%A6%E6%83%95%E5%98%B4%E5%94%87%E5%8F%91%E7%B4%AB%E5%8F%AF%E8%83%BD%E6%98%AF%E5%BF%83%E8%82%BA%E9%87%8D%E7%97%87%E4%BF%A1%E5%8F%B7&t=31&band_rank=4&Refer=top"
         },
         {
           "title": "人生真好玩 下辈子还来 热",
           "desc": "围绕“人生真好玩 下辈子还来 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
           "category": "热议",
-          "heat": "170174",
+          "heat": "360269",
           "url": "https://s.weibo.com/weibo?q=%E4%BA%BA%E7%94%9F%E7%9C%9F%E5%A5%BD%E7%8E%A9%20%E4%B8%8B%E8%BE%88%E5%AD%90%E8%BF%98%E6%9D%A5&t=31&band_rank=5&Refer=top"
-        },
-        {
-          "title": "奇瑞风云之夜T9L正式预售",
-          "desc": "围绕“奇瑞风云之夜T9L正式预售”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "167562",
-          "url": "https://s.weibo.com/weibo?q=%E5%A5%87%E7%91%9E%E9%A3%8E%E4%BA%91%E4%B9%8B%E5%A4%9CT9L%E6%AD%A3%E5%BC%8F%E9%A2%84%E5%94%AE&t=31&band_rank=5&Refer=top"
-        },
-        {
-          "title": "早睡",
-          "desc": "围绕“早睡”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "144052",
-          "url": "https://s.weibo.com/weibo?q=%E6%97%A9%E7%9D%A1&t=31&band_rank=6&Refer=top"
-        },
-        {
-          "title": "张雪峰公司发布讣告 热",
-          "desc": "围绕“张雪峰公司发布讣告 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "140410",
-          "url": "https://s.weibo.com/weibo?q=%E5%BC%A0%E9%9B%AA%E5%B3%B0%E5%85%AC%E5%8F%B8%E5%8F%91%E5%B8%83%E8%AE%A3%E5%91%8A&t=31&band_rank=7&Refer=top"
         },
         {
           "title": "周杰伦新歌口碑 热",
           "desc": "围绕“周杰伦新歌口碑 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
           "category": "热议",
-          "heat": "134249",
-          "url": "https://s.weibo.com/weibo?q=%E5%91%A8%E6%9D%B0%E4%BC%A6%E6%96%B0%E6%AD%8C%E5%8F%A3%E7%A2%91&t=31&band_rank=8&Refer=top"
+          "heat": "300103",
+          "url": "https://s.weibo.com/weibo?q=%E5%91%A8%E6%9D%B0%E4%BC%A6%E6%96%B0%E6%AD%8C%E5%8F%A3%E7%A2%91&t=31&band_rank=6&Refer=top"
         },
         {
-          "title": "伊朗喊美国做个了断",
-          "desc": "围绕“伊朗喊美国做个了断”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "title": "女子称专柜买4个LV包鉴定为假货 新",
+          "desc": "围绕“女子称专柜买4个LV包鉴定为假货 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
           "category": "热议",
-          "heat": "133458",
-          "url": "https://s.weibo.com/weibo?q=%E4%BC%8A%E6%9C%97%E5%96%8A%E7%BE%8E%E5%9B%BD%E5%81%9A%E4%B8%AA%E4%BA%86%E6%96%AD&t=31&band_rank=9&Refer=top"
+          "heat": "203682",
+          "url": "https://s.weibo.com/weibo?q=%E5%A5%B3%E5%AD%90%E7%A7%B0%E4%B8%93%E6%9F%9C%E4%B9%B04%E4%B8%AALV%E5%8C%85%E9%89%B4%E5%AE%9A%E4%B8%BA%E5%81%87%E8%B4%A7&t=31&band_rank=7&Refer=top"
         },
         {
-          "title": "张雪峰曾回应心脏不好质疑 热",
-          "desc": "围绕“张雪峰曾回应心脏不好质疑 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "title": "早睡",
+          "desc": "围绕“早睡”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
           "category": "热议",
-          "heat": "133315",
-          "url": "https://s.weibo.com/weibo?q=%E5%BC%A0%E9%9B%AA%E5%B3%B0%E6%9B%BE%E5%9B%9E%E5%BA%94%E5%BF%83%E8%84%8F%E4%B8%8D%E5%A5%BD%E8%B4%A8%E7%96%91&t=31&band_rank=10&Refer=top"
+          "heat": "161521",
+          "url": "https://s.weibo.com/weibo?q=%E6%97%A9%E7%9D%A1&t=31&band_rank=8&Refer=top"
+        },
+        {
+          "title": "王一博上海耐力赛纪录片",
+          "desc": "围绕“王一博上海耐力赛纪录片”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "160685",
+          "url": "https://s.weibo.com/weibo?q=%E7%8E%8B%E4%B8%80%E5%8D%9A%E4%B8%8A%E6%B5%B7%E8%80%90%E5%8A%9B%E8%B5%9B%E7%BA%AA%E5%BD%95%E7%89%87&t=31&band_rank=9&Refer=top"
+        },
+        {
+          "title": "猝死前1小时身体的预警 热",
+          "desc": "围绕“猝死前1小时身体的预警 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "160257",
+          "url": "https://s.weibo.com/weibo?q=%E7%8C%9D%E6%AD%BB%E5%89%8D1%E5%B0%8F%E6%97%B6%E8%BA%AB%E4%BD%93%E7%9A%84%E9%A2%84%E8%AD%A6&t=31&band_rank=10&Refer=top"
+        },
+        {
+          "title": "张雪峰公司发布讣告",
+          "desc": "围绕“张雪峰公司发布讣告”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "158602",
+          "url": "https://s.weibo.com/weibo?q=%E5%BC%A0%E9%9B%AA%E5%B3%B0%E5%85%AC%E5%8F%B8%E5%8F%91%E5%B8%83%E8%AE%A3%E5%91%8A&t=31&band_rank=11&Refer=top"
         },
         {
           "title": "火了还没适应的明星最好玩了 热",
           "desc": "围绕“火了还没适应的明星最好玩了 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
           "category": "娱乐",
-          "heat": "133138",
-          "url": "https://s.weibo.com/weibo?q=%E7%81%AB%E4%BA%86%E8%BF%98%E6%B2%A1%E9%80%82%E5%BA%94%E7%9A%84%E6%98%8E%E6%98%9F%E6%9C%80%E5%A5%BD%E7%8E%A9%E4%BA%86&t=31&band_rank=11&Refer=top"
+          "heat": "158458",
+          "url": "https://s.weibo.com/weibo?q=%E7%81%AB%E4%BA%86%E8%BF%98%E6%B2%A1%E9%80%82%E5%BA%94%E7%9A%84%E6%98%8E%E6%98%9F%E6%9C%80%E5%A5%BD%E7%8E%A9%E4%BA%86&t=31&band_rank=12&Refer=top"
         },
         {
-          "title": "张雪峰生前谈墓碑上要写什么 热",
-          "desc": "围绕“张雪峰生前谈墓碑上要写什么 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "title": "伊朗喊美国做个了断",
+          "desc": "围绕“伊朗喊美国做个了断”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
           "category": "热议",
-          "heat": "125102",
-          "url": "https://s.weibo.com/weibo?q=%E5%BC%A0%E9%9B%AA%E5%B3%B0%E7%94%9F%E5%89%8D%E8%B0%88%E5%A2%93%E7%A2%91%E4%B8%8A%E8%A6%81%E5%86%99%E4%BB%80%E4%B9%88&t=31&band_rank=12&Refer=top"
-        },
-        {
-          "title": "以色列战损窟窿越来越大",
-          "desc": "围绕“以色列战损窟窿越来越大”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "86990",
-          "url": "https://s.weibo.com/weibo?q=%E4%BB%A5%E8%89%B2%E5%88%97%E6%88%98%E6%8D%9F%E7%AA%9F%E7%AA%BF%E8%B6%8A%E6%9D%A5%E8%B6%8A%E5%A4%A7&t=31&band_rank=13&Refer=top"
-        },
-        {
-          "title": "张雪峰8年前曾谈猝死",
-          "desc": "围绕“张雪峰8年前曾谈猝死”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "83986",
-          "url": "https://s.weibo.com/weibo?q=%E5%BC%A0%E9%9B%AA%E5%B3%B08%E5%B9%B4%E5%89%8D%E6%9B%BE%E8%B0%88%E7%8C%9D%E6%AD%BB&t=31&band_rank=14&Refer=top"
-        },
-        {
-          "title": "心源性猝死",
-          "desc": "围绕“心源性猝死”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "80488",
-          "url": "https://s.weibo.com/weibo?q=%E5%BF%83%E6%BA%90%E6%80%A7%E7%8C%9D%E6%AD%BB&t=31&band_rank=15&Refer=top"
+          "heat": "157530",
+          "url": "https://s.weibo.com/weibo?q=%E4%BC%8A%E6%9C%97%E5%96%8A%E7%BE%8E%E5%9B%BD%E5%81%9A%E4%B8%AA%E4%BA%86%E6%96%AD&t=31&band_rank=13&Refer=top"
         },
         {
           "title": "峰学蔚来",
           "desc": "围绕“峰学蔚来”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
           "category": "热议",
-          "heat": "79817",
-          "url": "https://s.weibo.com/weibo?q=%E5%B3%B0%E5%AD%A6%E8%94%9A%E6%9D%A5&t=31&band_rank=16&Refer=top"
+          "heat": "156335",
+          "url": "https://s.weibo.com/weibo?q=%E5%B3%B0%E5%AD%A6%E8%94%9A%E6%9D%A5&t=31&band_rank=14&Refer=top"
         },
         {
-          "title": "4岁女童就诊177次患者是母亲",
-          "desc": "围绕“4岁女童就诊177次患者是母亲”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "77953",
-          "url": "https://s.weibo.com/weibo?q=4%E5%B2%81%E5%A5%B3%E7%AB%A5%E5%B0%B1%E8%AF%8A177%E6%AC%A1%E6%82%A3%E8%80%85%E6%98%AF%E6%AF%8D%E4%BA%B2&t=31&band_rank=17&Refer=top"
+          "title": "金价大跌金饰店不再人山人海 新",
+          "desc": "围绕“金价大跌金饰店不再人山人海 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "财经",
+          "heat": "155526",
+          "url": "https://s.weibo.com/weibo?q=%E9%87%91%E4%BB%B7%E5%A4%A7%E8%B7%8C%E9%87%91%E9%A5%B0%E5%BA%97%E4%B8%8D%E5%86%8D%E4%BA%BA%E5%B1%B1%E4%BA%BA%E6%B5%B7&t=31&band_rank=15&Refer=top"
         },
         {
-          "title": "中方要求日方立即彻查严惩",
-          "desc": "围绕“中方要求日方立即彻查严惩”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "title": "现货黄金 新",
+          "desc": "围绕“现货黄金 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
           "category": "热议",
-          "heat": "60360",
-          "url": "https://s.weibo.com/weibo?q=%E4%B8%AD%E6%96%B9%E8%A6%81%E6%B1%82%E6%97%A5%E6%96%B9%E7%AB%8B%E5%8D%B3%E5%BD%BB%E6%9F%A5%E4%B8%A5%E6%83%A9&t=31&band_rank=18&Refer=top"
+          "heat": "154276",
+          "url": "https://s.weibo.com/weibo?q=%E7%8E%B0%E8%B4%A7%E9%BB%84%E9%87%91&t=31&band_rank=16&Refer=top"
+        },
+        {
+          "title": "日本被曝多年搞反华教育 新",
+          "desc": "围绕“日本被曝多年搞反华教育 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "152744",
+          "url": "https://s.weibo.com/weibo?q=%E6%97%A5%E6%9C%AC%E8%A2%AB%E6%9B%9D%E5%A4%9A%E5%B9%B4%E6%90%9E%E5%8F%8D%E5%8D%8E%E6%95%99%E8%82%B2&t=31&band_rank=17&Refer=top"
+        },
+        {
+          "title": "以色列战损窟窿越来越大",
+          "desc": "围绕“以色列战损窟窿越来越大”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "140332",
+          "url": "https://s.weibo.com/weibo?q=%E4%BB%A5%E8%89%B2%E5%88%97%E6%88%98%E6%8D%9F%E7%AA%9F%E7%AA%BF%E8%B6%8A%E6%9D%A5%E8%B6%8A%E5%A4%A7&t=31&band_rank=18&Refer=top"
+        },
+        {
+          "title": "6类人高强度运动猝死风险高",
+          "desc": "围绕“6类人高强度运动猝死风险高”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "136121",
+          "url": "https://s.weibo.com/weibo?q=6%E7%B1%BB%E4%BA%BA%E9%AB%98%E5%BC%BA%E5%BA%A6%E8%BF%90%E5%8A%A8%E7%8C%9D%E6%AD%BB%E9%A3%8E%E9%99%A9%E9%AB%98&t=31&band_rank=19&Refer=top"
         }
       ]
     },
