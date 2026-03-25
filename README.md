@@ -22,7 +22,8 @@
 2. 用 OpenAI Responses API 生成整体概括和每条简要概括
 3. 在工作流运行目录内生成最新 `data/hourly-trends.json`
 4. 把最新 JSON 持久化到 `data-cache` 分支
-5. 自动和手动部署都会优先读取 `data-cache` 分支里的最新 JSON 再发布
+5. 自动更新会先读取 `data-cache` 分支里的最新 JSON，再追加当前小时
+6. 自动和手动部署都会优先读取 `data-cache` 分支里的最新 JSON 再发布
 
 如果没有配置 `OPENAI_API_KEY`，脚本仍可运行，但会退回到规则生成的保守摘要。
 

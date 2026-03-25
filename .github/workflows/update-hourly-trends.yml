@@ -34,6 +34,15 @@ jobs:
         with:
           node-version: "24"
 
+      - name: Restore latest hourly trends from data branch
+        run: |
+          git fetch origin "${DATA_BRANCH}" || true
+          if git show-ref --verify --quiet "refs/remotes/origin/${DATA_BRANCH}"; then
+            git show "origin/${DATA_BRANCH}:data/hourly-trends.json" > ./data/hourly-trends.json
+          else
+            echo "Data branch not found yet; keeping repository data file."
+          fi
+
       - name: Generate latest hourly trends
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
