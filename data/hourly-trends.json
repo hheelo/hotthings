@@ -1,7 +1,155 @@
 {
   "source": "微博热搜 + 规则摘要",
-  "updatedAt": "2026-03-26T17:09:03.613Z",
+  "updatedAt": "2026-03-26T19:15:10.062Z",
   "hours": [
+    {
+      "slot": "2026-03-27T03:00:00+08:00",
+      "label": "03/27 03:00",
+      "shortLabel": "03:00",
+      "summary": "这一小时热搜主要集中在文旅、热议、数码话题，用户更关注最新进展、事件影响和可快速理解的背景信息。",
+      "items": [
+        {
+          "title": "游客因拍照设备太专业被景区驱赶 热",
+          "desc": "围绕“游客因拍照设备太专业被景区驱赶 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "文旅",
+          "heat": "73995",
+          "url": "https://s.weibo.com/weibo?q=%E6%B8%B8%E5%AE%A2%E5%9B%A0%E6%8B%8D%E7%85%A7%E8%AE%BE%E5%A4%87%E5%A4%AA%E4%B8%93%E4%B8%9A%E8%A2%AB%E6%99%AF%E5%8C%BA%E9%A9%B1%E8%B5%B6&t=31&band_rank=1&Refer=top"
+        },
+        {
+          "title": "隐身的名字 沸",
+          "desc": "围绕“隐身的名字 沸”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "54960",
+          "url": "https://s.weibo.com/weibo?q=%E9%9A%90%E8%BA%AB%E7%9A%84%E5%90%8D%E5%AD%97&t=31&band_rank=1&Refer=top"
+        },
+        {
+          "title": "2026中国网络媒体论坛",
+          "desc": "围绕“2026中国网络媒体论坛”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "44378",
+          "url": "https://s.weibo.com/weibo?q=2026%E4%B8%AD%E5%9B%BD%E7%BD%91%E7%BB%9C%E5%AA%92%E4%BD%93%E8%AE%BA%E5%9D%9B&t=31&band_rank=2&Refer=top"
+        },
+        {
+          "title": "陈飞宇迪丽热巴两集短剧 热",
+          "desc": "围绕“陈飞宇迪丽热巴两集短剧 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "43192",
+          "url": "https://s.weibo.com/weibo?q=%E9%99%88%E9%A3%9E%E5%AE%87%E8%BF%AA%E4%B8%BD%E7%83%AD%E5%B7%B4%E4%B8%A4%E9%9B%86%E7%9F%AD%E5%89%A7&t=31&band_rank=3&Refer=top"
+        },
+        {
+          "title": "千金不换 撤档 热",
+          "desc": "围绕“千金不换 撤档 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "40186",
+          "url": "https://s.weibo.com/weibo?q=%E5%8D%83%E9%87%91%E4%B8%8D%E6%8D%A2%20%E6%92%A4%E6%A1%A3&t=31&band_rank=4&Refer=top"
+        },
+        {
+          "title": "伊朗导弹2小时内4次密集砸向以本土",
+          "desc": "围绕“伊朗导弹2小时内4次密集砸向以本土”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "38698",
+          "url": "https://s.weibo.com/weibo?q=%E4%BC%8A%E6%9C%97%E5%AF%BC%E5%BC%B92%E5%B0%8F%E6%97%B6%E5%86%854%E6%AC%A1%E5%AF%86%E9%9B%86%E7%A0%B8%E5%90%91%E4%BB%A5%E6%9C%AC%E5%9C%9F&t=31&band_rank=5&Refer=top"
+        },
+        {
+          "title": "伊朗议长称地区某国支持敌人夺岛",
+          "desc": "围绕“伊朗议长称地区某国支持敌人夺岛”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "37740",
+          "url": "https://s.weibo.com/weibo?q=%E4%BC%8A%E6%9C%97%E8%AE%AE%E9%95%BF%E7%A7%B0%E5%9C%B0%E5%8C%BA%E6%9F%90%E5%9B%BD%E6%94%AF%E6%8C%81%E6%95%8C%E4%BA%BA%E5%A4%BA%E5%B2%9B&t=31&band_rank=6&Refer=top"
+        },
+        {
+          "title": "韩国垃圾袋一袋难求",
+          "desc": "围绕“韩国垃圾袋一袋难求”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "31942",
+          "url": "https://s.weibo.com/weibo?q=%E9%9F%A9%E5%9B%BD%E5%9E%83%E5%9C%BE%E8%A2%8B%E4%B8%80%E8%A2%8B%E9%9A%BE%E6%B1%82&t=31&band_rank=7&Refer=top"
+        },
+        {
+          "title": "央视新闻夸了张凌赫雉鸡翎造型",
+          "desc": "围绕“央视新闻夸了张凌赫雉鸡翎造型”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "31896",
+          "url": "https://s.weibo.com/weibo?q=%E5%A4%AE%E8%A7%86%E6%96%B0%E9%97%BB%E5%A4%B8%E4%BA%86%E5%BC%A0%E5%87%8C%E8%B5%AB%E9%9B%89%E9%B8%A1%E7%BF%8E%E9%80%A0%E5%9E%8B&t=31&band_rank=8&Refer=top"
+        },
+        {
+          "title": "多方回应一吨旧手机能炼375克黄金",
+          "desc": "围绕“多方回应一吨旧手机能炼375克黄金”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "数码",
+          "heat": "30960",
+          "url": "https://s.weibo.com/weibo?q=%E5%A4%9A%E6%96%B9%E5%9B%9E%E5%BA%94%E4%B8%80%E5%90%A8%E6%97%A7%E6%89%8B%E6%9C%BA%E8%83%BD%E7%82%BC375%E5%85%8B%E9%BB%84%E9%87%91&t=31&band_rank=9&Refer=top"
+        },
+        {
+          "title": "罗技回应发布侮辱性广告",
+          "desc": "围绕“罗技回应发布侮辱性广告”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "28814",
+          "url": "https://s.weibo.com/weibo?q=%E7%BD%97%E6%8A%80%E5%9B%9E%E5%BA%94%E5%8F%91%E5%B8%83%E4%BE%AE%E8%BE%B1%E6%80%A7%E5%B9%BF%E5%91%8A&t=31&band_rank=10&Refer=top"
+        },
+        {
+          "title": "你其实从未触摸过任何东西",
+          "desc": "围绕“你其实从未触摸过任何东西”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "27555",
+          "url": "https://s.weibo.com/weibo?q=%E4%BD%A0%E5%85%B6%E5%AE%9E%E4%BB%8E%E6%9C%AA%E8%A7%A6%E6%91%B8%E8%BF%87%E4%BB%BB%E4%BD%95%E4%B8%9C%E8%A5%BF&t=31&band_rank=11&Refer=top"
+        },
+        {
+          "title": "罗技侮辱消费者",
+          "desc": "围绕“罗技侮辱消费者”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "26007",
+          "url": "https://s.weibo.com/weibo?q=%E7%BD%97%E6%8A%80%E4%BE%AE%E8%BE%B1%E6%B6%88%E8%B4%B9%E8%80%85&t=31&band_rank=12&Refer=top"
+        },
+        {
+          "title": "林俊杰称自己生命的沙漏加速了",
+          "desc": "围绕“林俊杰称自己生命的沙漏加速了”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "25172",
+          "url": "https://s.weibo.com/weibo?q=%E6%9E%97%E4%BF%8A%E6%9D%B0%E7%A7%B0%E8%87%AA%E5%B7%B1%E7%94%9F%E5%91%BD%E7%9A%84%E6%B2%99%E6%BC%8F%E5%8A%A0%E9%80%9F%E4%BA%86&t=31&band_rank=13&Refer=top"
+        },
+        {
+          "title": "罗技 像狗一样跑过来",
+          "desc": "围绕“罗技 像狗一样跑过来”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "25127",
+          "url": "https://s.weibo.com/weibo?q=%E7%BD%97%E6%8A%80%20%E5%83%8F%E7%8B%97%E4%B8%80%E6%A0%B7%E8%B7%91%E8%BF%87%E6%9D%A5&t=31&band_rank=14&Refer=top"
+        },
+        {
+          "title": "日网痛批日本小学午餐",
+          "desc": "围绕“日网痛批日本小学午餐”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "25083",
+          "url": "https://s.weibo.com/weibo?q=%E6%97%A5%E7%BD%91%E7%97%9B%E6%89%B9%E6%97%A5%E6%9C%AC%E5%B0%8F%E5%AD%A6%E5%8D%88%E9%A4%90&t=31&band_rank=15&Refer=top"
+        },
+        {
+          "title": "梁祯元 李羲承",
+          "desc": "围绕“梁祯元 李羲承”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "23567",
+          "url": "https://s.weibo.com/weibo?q=%E6%A2%81%E7%A5%AF%E5%85%83%20%E6%9D%8E%E7%BE%B2%E6%89%BF&t=31&band_rank=16&Refer=top"
+        },
+        {
+          "title": "LPL进入大回归时代",
+          "desc": "围绕“LPL进入大回归时代”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "23282",
+          "url": "https://s.weibo.com/weibo?q=LPL%E8%BF%9B%E5%85%A5%E5%A4%A7%E5%9B%9E%E5%BD%92%E6%97%B6%E4%BB%A3&t=31&band_rank=17&Refer=top"
+        },
+        {
+          "title": "一笑随歌",
+          "desc": "围绕“一笑随歌”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "21760",
+          "url": "https://s.weibo.com/weibo?q=%E4%B8%80%E7%AC%91%E9%9A%8F%E6%AD%8C&t=31&band_rank=18&Refer=top"
+        },
+        {
+          "title": "货拉拉司机运10箱茅台失联后续",
+          "desc": "围绕“货拉拉司机运10箱茅台失联后续”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "21727",
+          "url": "https://s.weibo.com/weibo?q=%E8%B4%A7%E6%8B%89%E6%8B%89%E5%8F%B8%E6%9C%BA%E8%BF%9010%E7%AE%B1%E8%8C%85%E5%8F%B0%E5%A4%B1%E8%81%94%E5%90%8E%E7%BB%AD&t=31&band_rank=19&Refer=top"
+        }
+      ]
+    },
     {
       "slot": "2026-03-27T01:00:00+08:00",
       "label": "03/27 01:00",
@@ -2915,32 +3063,6 @@
           "desc": "下午疲劳场景带动相关搜索，用户偏好简单、低门槛、可立即执行的动作组合。",
           "category": "健康",
           "heat": "58k"
-        }
-      ]
-    },
-    {
-      "slot": "2026-03-22T14:00:00+08:00",
-      "label": "03-22 14:00",
-      "shortLabel": "14:00",
-      "summary": "下午热点逐步转向行业消息和公共事件，信息密度更高，用户偏好简要概括。",
-      "items": [
-        {
-          "title": "新能源车企公布季度交付数据",
-          "desc": "用户重点比较交付量变化与市场占有率，讨论集中在价格战和新品节奏。",
-          "category": "汽车",
-          "heat": "123k"
-        },
-        {
-          "title": "多地文旅活动提前预热",
-          "desc": "搜索集中在节假日目的地、票务优惠和现场体验，热度具备明显区域性。",
-          "category": "文旅",
-          "heat": "84k"
-        },
-        {
-          "title": "城市更新项目进展引讨论",
-          "desc": "市民更关心施工周期、周边配套与通行变化，相关政策解读也获得关注。",
-          "category": "社会",
-          "heat": "62k"
         }
       ]
     }
