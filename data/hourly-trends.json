@@ -1,7 +1,155 @@
 {
   "source": "微博热搜 + 规则摘要",
-  "updatedAt": "2026-03-26T21:36:45.557Z",
+  "updatedAt": "2026-03-26T22:35:57.067Z",
   "hours": [
+    {
+      "slot": "2026-03-27T06:00:00+08:00",
+      "label": "03/27 06:00",
+      "shortLabel": "06:00",
+      "summary": "这一小时热搜主要集中在文旅、热议话题，用户更关注最新进展、事件影响和可快速理解的背景信息。",
+      "items": [
+        {
+          "title": "游客因拍照设备太专业被景区驱赶 热",
+          "desc": "围绕“游客因拍照设备太专业被景区驱赶 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "文旅",
+          "heat": "463951",
+          "url": "https://s.weibo.com/weibo?q=%E6%B8%B8%E5%AE%A2%E5%9B%A0%E6%8B%8D%E7%85%A7%E8%AE%BE%E5%A4%87%E5%A4%AA%E4%B8%93%E4%B8%9A%E8%A2%AB%E6%99%AF%E5%8C%BA%E9%A9%B1%E8%B5%B6&t=31&band_rank=1&Refer=top"
+        },
+        {
+          "title": "隐身的名字 沸",
+          "desc": "围绕“隐身的名字 沸”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "332191",
+          "url": "https://s.weibo.com/weibo?q=%E9%9A%90%E8%BA%AB%E7%9A%84%E5%90%8D%E5%AD%97&t=31&band_rank=1&Refer=top"
+        },
+        {
+          "title": "2026中国网络媒体论坛",
+          "desc": "围绕“2026中国网络媒体论坛”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "273835",
+          "url": "https://s.weibo.com/weibo?q=2026%E4%B8%AD%E5%9B%BD%E7%BD%91%E7%BB%9C%E5%AA%92%E4%BD%93%E8%AE%BA%E5%9D%9B&t=31&band_rank=2&Refer=top"
+        },
+        {
+          "title": "马杜罗夫妇关押地如同人间炼狱 热",
+          "desc": "围绕“马杜罗夫妇关押地如同人间炼狱 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "223685",
+          "url": "https://s.weibo.com/weibo?q=%E9%A9%AC%E6%9D%9C%E7%BD%97%E5%A4%AB%E5%A6%87%E5%85%B3%E6%8A%BC%E5%9C%B0%E5%A6%82%E5%90%8C%E4%BA%BA%E9%97%B4%E7%82%BC%E7%8B%B1&t=31&band_rank=3&Refer=top"
+        },
+        {
+          "title": "这样的民族败类必将被钉在历史耻辱柱上 热",
+          "desc": "围绕“这样的民族败类必将被钉在历史耻辱柱上 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "185979",
+          "url": "https://s.weibo.com/weibo?q=%E8%BF%99%E6%A0%B7%E7%9A%84%E6%B0%91%E6%97%8F%E8%B4%A5%E7%B1%BB%E5%BF%85%E5%B0%86%E8%A2%AB%E9%92%89%E5%9C%A8%E5%8E%86%E5%8F%B2%E8%80%BB%E8%BE%B1%E6%9F%B1%E4%B8%8A&t=31&band_rank=4&Refer=top"
+        },
+        {
+          "title": "伊朗导弹2小时内4次密集砸向以本土 热",
+          "desc": "围绕“伊朗导弹2小时内4次密集砸向以本土 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "154182",
+          "url": "https://s.weibo.com/weibo?q=%E4%BC%8A%E6%9C%97%E5%AF%BC%E5%BC%B92%E5%B0%8F%E6%97%B6%E5%86%854%E6%AC%A1%E5%AF%86%E9%9B%86%E7%A0%B8%E5%90%91%E4%BB%A5%E6%9C%AC%E5%9C%9F&t=31&band_rank=5&Refer=top"
+        },
+        {
+          "title": "专家辟谣怀儿子孕妈皮肤会变差",
+          "desc": "围绕“专家辟谣怀儿子孕妈皮肤会变差”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "149695",
+          "url": "https://s.weibo.com/weibo?q=%E4%B8%93%E5%AE%B6%E8%BE%9F%E8%B0%A3%E6%80%80%E5%84%BF%E5%AD%90%E5%AD%95%E5%A6%88%E7%9A%AE%E8%82%A4%E4%BC%9A%E5%8F%98%E5%B7%AE&t=31&band_rank=5&Refer=top"
+        },
+        {
+          "title": "央视新闻夸了张凌赫雉鸡翎造型 热",
+          "desc": "围绕“央视新闻夸了张凌赫雉鸡翎造型 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "135486",
+          "url": "https://s.weibo.com/weibo?q=%E5%A4%AE%E8%A7%86%E6%96%B0%E9%97%BB%E5%A4%B8%E4%BA%86%E5%BC%A0%E5%87%8C%E8%B5%AB%E9%9B%89%E9%B8%A1%E7%BF%8E%E9%80%A0%E5%9E%8B&t=31&band_rank=6&Refer=top"
+        },
+        {
+          "title": "陈飞宇迪丽热巴两集短剧",
+          "desc": "围绕“陈飞宇迪丽热巴两集短剧”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "86471",
+          "url": "https://s.weibo.com/weibo?q=%E9%99%88%E9%A3%9E%E5%AE%87%E8%BF%AA%E4%B8%BD%E7%83%AD%E5%B7%B4%E4%B8%A4%E9%9B%86%E7%9F%AD%E5%89%A7&t=31&band_rank=7&Refer=top"
+        },
+        {
+          "title": "38岁教培创始人突发心梗后怕不已",
+          "desc": "围绕“38岁教培创始人突发心梗后怕不已”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "77447",
+          "url": "https://s.weibo.com/weibo?q=38%E5%B2%81%E6%95%99%E5%9F%B9%E5%88%9B%E5%A7%8B%E4%BA%BA%E7%AA%81%E5%8F%91%E5%BF%83%E6%A2%97%E5%90%8E%E6%80%95%E4%B8%8D%E5%B7%B2&t=31&band_rank=8&Refer=top"
+        },
+        {
+          "title": "韩国垃圾袋一袋难求",
+          "desc": "围绕“韩国垃圾袋一袋难求”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "69449",
+          "url": "https://s.weibo.com/weibo?q=%E9%9F%A9%E5%9B%BD%E5%9E%83%E5%9C%BE%E8%A2%8B%E4%B8%80%E8%A2%8B%E9%9A%BE%E6%B1%82&t=31&band_rank=9&Refer=top"
+        },
+        {
+          "title": "罗技回应发布侮辱性广告",
+          "desc": "围绕“罗技回应发布侮辱性广告”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "69102",
+          "url": "https://s.weibo.com/weibo?q=%E7%BD%97%E6%8A%80%E5%9B%9E%E5%BA%94%E5%8F%91%E5%B8%83%E4%BE%AE%E8%BE%B1%E6%80%A7%E5%B9%BF%E5%91%8A&t=31&band_rank=10&Refer=top"
+        },
+        {
+          "title": "美方被曝正酝酿对伊朗最后一击",
+          "desc": "围绕“美方被曝正酝酿对伊朗最后一击”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "67945",
+          "url": "https://s.weibo.com/weibo?q=%E7%BE%8E%E6%96%B9%E8%A2%AB%E6%9B%9D%E6%AD%A3%E9%85%9D%E9%85%BF%E5%AF%B9%E4%BC%8A%E6%9C%97%E6%9C%80%E5%90%8E%E4%B8%80%E5%87%BB&t=31&band_rank=11&Refer=top"
+        },
+        {
+          "title": "罗技侮辱消费者",
+          "desc": "围绕“罗技侮辱消费者”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "67852",
+          "url": "https://s.weibo.com/weibo?q=%E7%BD%97%E6%8A%80%E4%BE%AE%E8%BE%B1%E6%B6%88%E8%B4%B9%E8%80%85&t=31&band_rank=12&Refer=top"
+        },
+        {
+          "title": "你其实从未触摸过任何东西",
+          "desc": "围绕“你其实从未触摸过任何东西”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "66796",
+          "url": "https://s.weibo.com/weibo?q=%E4%BD%A0%E5%85%B6%E5%AE%9E%E4%BB%8E%E6%9C%AA%E8%A7%A6%E6%91%B8%E8%BF%87%E4%BB%BB%E4%BD%95%E4%B8%9C%E8%A5%BF&t=31&band_rank=13&Refer=top"
+        },
+        {
+          "title": "43岁不健身和61岁健身的区别",
+          "desc": "围绕“43岁不健身和61岁健身的区别”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "60019",
+          "url": "https://s.weibo.com/weibo?q=43%E5%B2%81%E4%B8%8D%E5%81%A5%E8%BA%AB%E5%92%8C61%E5%B2%81%E5%81%A5%E8%BA%AB%E7%9A%84%E5%8C%BA%E5%88%AB&t=31&band_rank=14&Refer=top"
+        },
+        {
+          "title": "留几手发文暗讽被全网炮轰",
+          "desc": "围绕“留几手发文暗讽被全网炮轰”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "55227",
+          "url": "https://s.weibo.com/weibo?q=%E7%95%99%E5%87%A0%E6%89%8B%E5%8F%91%E6%96%87%E6%9A%97%E8%AE%BD%E8%A2%AB%E5%85%A8%E7%BD%91%E7%82%AE%E8%BD%B0&t=31&band_rank=15&Refer=top"
+        },
+        {
+          "title": "日网痛批日本小学午餐",
+          "desc": "围绕“日网痛批日本小学午餐”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "53611",
+          "url": "https://s.weibo.com/weibo?q=%E6%97%A5%E7%BD%91%E7%97%9B%E6%89%B9%E6%97%A5%E6%9C%AC%E5%B0%8F%E5%AD%A6%E5%8D%88%E9%A4%90&t=31&band_rank=16&Refer=top"
+        },
+        {
+          "title": "伊朗议长称地区某国支持敌人夺岛",
+          "desc": "围绕“伊朗议长称地区某国支持敌人夺岛”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "53223",
+          "url": "https://s.weibo.com/weibo?q=%E4%BC%8A%E6%9C%97%E8%AE%AE%E9%95%BF%E7%A7%B0%E5%9C%B0%E5%8C%BA%E6%9F%90%E5%9B%BD%E6%94%AF%E6%8C%81%E6%95%8C%E4%BA%BA%E5%A4%BA%E5%B2%9B&t=31&band_rank=17&Refer=top"
+        },
+        {
+          "title": "千金不换 撤档",
+          "desc": "围绕“千金不换 撤档”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "47198",
+          "url": "https://s.weibo.com/weibo?q=%E5%8D%83%E9%87%91%E4%B8%8D%E6%8D%A2%20%E6%92%A4%E6%A1%A3&t=31&band_rank=18&Refer=top"
+        }
+      ]
+    },
     {
       "slot": "2026-03-27T05:00:00+08:00",
       "label": "03/27 05:00",
@@ -3281,32 +3429,6 @@
           "desc": "音频内容的搜索提升，用户关注主题陪伴感、主持风格与更新频率。",
           "category": "播客",
           "heat": "54k"
-        }
-      ]
-    },
-    {
-      "slot": "2026-03-22T20:00:00+08:00",
-      "label": "03-22 20:00",
-      "shortLabel": "20:00",
-      "summary": "黄金时段热搜进入全天峰值，娱乐、社会、科技三类内容的讨论同时活跃。",
-      "items": [
-        {
-          "title": "新机发布会参数对比刷屏",
-          "desc": "用户主要比较影像、续航和价格区间，摘要需求明显高于长篇评测阅读。",
-          "category": "数码",
-          "heat": "149k"
-        },
-        {
-          "title": "热门综艺名场面持续扩散",
-          "desc": "短视频切片推动二次传播，讨论多集中在嘉宾互动、剪辑节奏和现场反应。",
-          "category": "综艺",
-          "heat": "111k"
-        },
-        {
-          "title": "公共议题深度解读进入热榜",
-          "desc": "用户偏好能快速说明背景、关键争点和后续影响的简明概括型内容。",
-          "category": "社会",
-          "heat": "97k"
         }
       ]
     }
