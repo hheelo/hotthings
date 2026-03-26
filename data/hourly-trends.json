@@ -1,7 +1,155 @@
 {
   "source": "微博热搜 + 规则摘要",
-  "updatedAt": "2026-03-26T09:03:47.010Z",
+  "updatedAt": "2026-03-26T10:09:28.348Z",
   "hours": [
+    {
+      "slot": "2026-03-26T18:00:00+08:00",
+      "label": "03/26 18:00",
+      "shortLabel": "18:00",
+      "summary": "这一小时热搜主要集中在热议、娱乐、汽车话题，用户更关注最新进展、事件影响和可快速理解的背景信息。",
+      "items": [
+        {
+          "title": "晋江发情况说明 新",
+          "desc": "围绕“晋江发情况说明 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "1160624",
+          "url": "https://s.weibo.com/weibo?q=%E6%99%8B%E6%B1%9F%E5%8F%91%E6%83%85%E5%86%B5%E8%AF%B4%E6%98%8E&t=31&band_rank=1&Refer=top"
+        },
+        {
+          "title": "iPhone4回收价暴涨80倍 新",
+          "desc": "围绕“iPhone4回收价暴涨80倍 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "846272",
+          "url": "https://s.weibo.com/weibo?q=iPhone4%E5%9B%9E%E6%94%B6%E4%BB%B7%E6%9A%B4%E6%B6%A880%E5%80%8D&t=31&band_rank=1&Refer=top"
+        },
+        {
+          "title": "七彩云南万千气象",
+          "desc": "围绕“七彩云南万千气象”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "660236",
+          "url": "https://s.weibo.com/weibo?q=%E4%B8%83%E5%BD%A9%E4%BA%91%E5%8D%97%E4%B8%87%E5%8D%83%E6%B0%94%E8%B1%A1&t=31&band_rank=2&Refer=top"
+        },
+        {
+          "title": "微博文化交流之夜澳门站开票",
+          "desc": "围绕“微博文化交流之夜澳门站开票”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "415759",
+          "url": "https://s.weibo.com/weibo?q=%E5%BE%AE%E5%8D%9A%E6%96%87%E5%8C%96%E4%BA%A4%E6%B5%81%E4%B9%8B%E5%A4%9C%E6%BE%B3%E9%97%A8%E7%AB%99%E5%BC%80%E7%A5%A8&t=31&band_rank=2&Refer=top"
+        },
+        {
+          "title": "王俊凯 演唱会",
+          "desc": "围绕“王俊凯 演唱会”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "娱乐",
+          "heat": "295344",
+          "url": "https://s.weibo.com/weibo?q=%E7%8E%8B%E4%BF%8A%E5%87%AF%20%E6%BC%94%E5%94%B1%E4%BC%9A&t=31&band_rank=3&Refer=top"
+        },
+        {
+          "title": "伊朗伊斯兰革命卫队海军指挥官身亡 新",
+          "desc": "围绕“伊朗伊斯兰革命卫队海军指挥官身亡 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "285941",
+          "url": "https://s.weibo.com/weibo?q=%E4%BC%8A%E6%9C%97%E4%BC%8A%E6%96%AF%E5%85%B0%E9%9D%A9%E5%91%BD%E5%8D%AB%E9%98%9F%E6%B5%B7%E5%86%9B%E6%8C%87%E6%8C%A5%E5%AE%98%E8%BA%AB%E4%BA%A1&t=31&band_rank=4&Refer=top"
+        },
+        {
+          "title": "我们一直把苹果放反了 新",
+          "desc": "围绕“我们一直把苹果放反了 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "278767",
+          "url": "https://s.weibo.com/weibo?q=%E6%88%91%E4%BB%AC%E4%B8%80%E7%9B%B4%E6%8A%8A%E8%8B%B9%E6%9E%9C%E6%94%BE%E5%8F%8D%E4%BA%86&t=31&band_rank=5&Refer=top"
+        },
+        {
+          "title": "你是迟来的欢喜春日现偶",
+          "desc": "围绕“你是迟来的欢喜春日现偶”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "264348",
+          "url": "https://s.weibo.com/weibo?q=%E4%BD%A0%E6%98%AF%E8%BF%9F%E6%9D%A5%E7%9A%84%E6%AC%A2%E5%96%9C%E6%98%A5%E6%97%A5%E7%8E%B0%E5%81%B6&t=31&band_rank=5&Refer=top"
+        },
+        {
+          "title": "无畏 领奖 新",
+          "desc": "围绕“无畏 领奖 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "218687",
+          "url": "https://s.weibo.com/weibo?q=%E6%97%A0%E7%95%8F%20%E9%A2%86%E5%A5%96&t=31&band_rank=6&Refer=top"
+        },
+        {
+          "title": "孟子义差点上到李昀锐车上",
+          "desc": "围绕“孟子义差点上到李昀锐车上”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "汽车",
+          "heat": "218039",
+          "url": "https://s.weibo.com/weibo?q=%E5%AD%9F%E5%AD%90%E4%B9%89%E5%B7%AE%E7%82%B9%E4%B8%8A%E5%88%B0%E6%9D%8E%E6%98%80%E9%94%90%E8%BD%A6%E4%B8%8A&t=31&band_rank=7&Refer=top"
+        },
+        {
+          "title": "救命神器AED使用率不足0.1%",
+          "desc": "围绕“救命神器AED使用率不足0.1%”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "217532",
+          "url": "https://s.weibo.com/weibo?q=%E6%95%91%E5%91%BD%E7%A5%9E%E5%99%A8AED%E4%BD%BF%E7%94%A8%E7%8E%87%E4%B8%8D%E8%B6%B30.1%25&t=31&band_rank=8&Refer=top"
+        },
+        {
+          "title": "每天一顿重口外卖影响有多大 新",
+          "desc": "围绕“每天一顿重口外卖影响有多大 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "生活",
+          "heat": "217115",
+          "url": "https://s.weibo.com/weibo?q=%E6%AF%8F%E5%A4%A9%E4%B8%80%E9%A1%BF%E9%87%8D%E5%8F%A3%E5%A4%96%E5%8D%96%E5%BD%B1%E5%93%8D%E6%9C%89%E5%A4%9A%E5%A4%A7&t=31&band_rank=9&Refer=top"
+        },
+        {
+          "title": "张雪峰曾为多睡一会儿住酒店 热",
+          "desc": "围绕“张雪峰曾为多睡一会儿住酒店 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "216510",
+          "url": "https://s.weibo.com/weibo?q=%E5%BC%A0%E9%9B%AA%E5%B3%B0%E6%9B%BE%E4%B8%BA%E5%A4%9A%E7%9D%A1%E4%B8%80%E4%BC%9A%E5%84%BF%E4%BD%8F%E9%85%92%E5%BA%97&t=31&band_rank=10&Refer=top"
+        },
+        {
+          "title": "镜头霸凌",
+          "desc": "围绕“镜头霸凌”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "215962",
+          "url": "https://s.weibo.com/weibo?q=%E9%95%9C%E5%A4%B4%E9%9C%B8%E5%87%8C&t=31&band_rank=11&Refer=top"
+        },
+        {
+          "title": "助理曾因担心张雪峰准备买AED 新",
+          "desc": "围绕“助理曾因担心张雪峰准备买AED 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "215420",
+          "url": "https://s.weibo.com/weibo?q=%E5%8A%A9%E7%90%86%E6%9B%BE%E5%9B%A0%E6%8B%85%E5%BF%83%E5%BC%A0%E9%9B%AA%E5%B3%B0%E5%87%86%E5%A4%87%E4%B9%B0AED&t=31&band_rank=12&Refer=top"
+        },
+        {
+          "title": "孟子义腰比名牌细",
+          "desc": "围绕“孟子义腰比名牌细”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "214488",
+          "url": "https://s.weibo.com/weibo?q=%E5%AD%9F%E5%AD%90%E4%B9%89%E8%85%B0%E6%AF%94%E5%90%8D%E7%89%8C%E7%BB%86&t=31&band_rank=13&Refer=top"
+        },
+        {
+          "title": "妈妈重回案发现场洗刷儿子血迹",
+          "desc": "围绕“妈妈重回案发现场洗刷儿子血迹”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "210961",
+          "url": "https://s.weibo.com/weibo?q=%E5%A6%88%E5%A6%88%E9%87%8D%E5%9B%9E%E6%A1%88%E5%8F%91%E7%8E%B0%E5%9C%BA%E6%B4%97%E5%88%B7%E5%84%BF%E5%AD%90%E8%A1%80%E8%BF%B9&t=31&band_rank=14&Refer=top"
+        },
+        {
+          "title": "王俊凯卡点521 新",
+          "desc": "围绕“王俊凯卡点521 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "206589",
+          "url": "https://s.weibo.com/weibo?q=%E7%8E%8B%E4%BF%8A%E5%87%AF%E5%8D%A1%E7%82%B9521&t=31&band_rank=15&Refer=top"
+        },
+        {
+          "title": "共和国3天痛失3位院士",
+          "desc": "围绕“共和国3天痛失3位院士”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "192362",
+          "url": "https://s.weibo.com/weibo?q=%E5%85%B1%E5%92%8C%E5%9B%BD3%E5%A4%A9%E7%97%9B%E5%A4%B13%E4%BD%8D%E9%99%A2%E5%A3%AB&t=31&band_rank=16&Refer=top"
+        },
+        {
+          "title": "拼多多新拼姆一期150亿品牌自营 新",
+          "desc": "围绕“拼多多新拼姆一期150亿品牌自营 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "182299",
+          "url": "https://s.weibo.com/weibo?q=%E6%8B%BC%E5%A4%9A%E5%A4%9A%E6%96%B0%E6%8B%BC%E5%A7%86%E4%B8%80%E6%9C%9F150%E4%BA%BF%E5%93%81%E7%89%8C%E8%87%AA%E8%90%A5&t=31&band_rank=17&Refer=top"
+        }
+      ]
+    },
     {
       "slot": "2026-03-26T17:00:00+08:00",
       "label": "03/26 17:00",
