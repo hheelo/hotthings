@@ -1,7 +1,155 @@
 {
   "source": "微博热搜 + 规则摘要",
-  "updatedAt": "2026-06-12T04:25:05.271Z",
+  "updatedAt": "2026-06-12T09:01:50.870Z",
   "hours": [
+    {
+      "slot": "2026-06-12T17:00:00+08:00",
+      "label": "06/12 17:00",
+      "shortLabel": "17:00",
+      "summary": "这一小时热搜主要集中在热议、财经话题，用户更关注最新进展、事件影响和可快速理解的背景信息。",
+      "items": [
+        {
+          "title": "世界杯在中国的收视率爆了",
+          "desc": "围绕“世界杯在中国的收视率爆了”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "1156765",
+          "url": "https://s.weibo.com/weibo?q=%E4%B8%96%E7%95%8C%E6%9D%AF%E5%9C%A8%E4%B8%AD%E5%9B%BD%E7%9A%84%E6%94%B6%E8%A7%86%E7%8E%87%E7%88%86%E4%BA%86&t=31&band_rank=1&Refer=top"
+        },
+        {
+          "title": "老外也疑惑中国为什么不参加世界杯",
+          "desc": "围绕“老外也疑惑中国为什么不参加世界杯”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "848140",
+          "url": "https://s.weibo.com/weibo?q=%E8%80%81%E5%A4%96%E4%B9%9F%E7%96%91%E6%83%91%E4%B8%AD%E5%9B%BD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E5%8F%82%E5%8A%A0%E4%B8%96%E7%95%8C%E6%9D%AF&t=31&band_rank=1&Refer=top"
+        },
+        {
+          "title": "打卡中国 新",
+          "desc": "围绕“打卡中国 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "758470",
+          "url": "https://s.weibo.com/weibo?q=%E6%89%93%E5%8D%A1%E4%B8%AD%E5%9B%BD&t=31&band_rank=2&Refer=top"
+        },
+        {
+          "title": "华为开发者大会2026",
+          "desc": "围绕“华为开发者大会2026”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "757482",
+          "url": "https://s.weibo.com/weibo?q=%E5%8D%8E%E4%B8%BA%E5%BC%80%E5%8F%91%E8%80%85%E5%A4%A7%E4%BC%9A2026&t=31&band_rank=2&Refer=top"
+        },
+        {
+          "title": "买连衣裙 看手肘",
+          "desc": "围绕“买连衣裙 看手肘”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "733766",
+          "url": "https://s.weibo.com/weibo?q=%E4%B9%B0%E8%BF%9E%E8%A1%A3%E8%A3%99%20%E7%9C%8B%E6%89%8B%E8%82%98&t=31&band_rank=3&Refer=top"
+        },
+        {
+          "title": "25岁女子为保胎多器官衰竭进ICU 新",
+          "desc": "围绕“25岁女子为保胎多器官衰竭进ICU 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "723049",
+          "url": "https://s.weibo.com/weibo?q=25%E5%B2%81%E5%A5%B3%E5%AD%90%E4%B8%BA%E4%BF%9D%E8%83%8E%E5%A4%9A%E5%99%A8%E5%AE%98%E8%A1%B0%E7%AB%AD%E8%BF%9BICU&t=31&band_rank=4&Refer=top"
+        },
+        {
+          "title": "内娱闯不进去的赛道短剧闯进去了 新",
+          "desc": "围绕“内娱闯不进去的赛道短剧闯进去了 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "678114",
+          "url": "https://s.weibo.com/weibo?q=%E5%86%85%E5%A8%B1%E9%97%AF%E4%B8%8D%E8%BF%9B%E5%8E%BB%E7%9A%84%E8%B5%9B%E9%81%93%E7%9F%AD%E5%89%A7%E9%97%AF%E8%BF%9B%E5%8E%BB%E4%BA%86&t=31&band_rank=5&Refer=top"
+        },
+        {
+          "title": "买VPlus多送一个月",
+          "desc": "围绕“买VPlus多送一个月”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "588568",
+          "url": "https://s.weibo.com/weibo?q=%E4%B9%B0VPlus%E5%A4%9A%E9%80%81%E4%B8%80%E4%B8%AA%E6%9C%88&t=31&band_rank=5&Refer=top"
+        },
+        {
+          "title": "念一辈子本科",
+          "desc": "围绕“念一辈子本科”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "483447",
+          "url": "https://s.weibo.com/weibo?q=%E5%BF%B5%E4%B8%80%E8%BE%88%E5%AD%90%E6%9C%AC%E7%A7%91&t=31&band_rank=6&Refer=top"
+        },
+        {
+          "title": "张月选安崎投了40票而淡淡投了0",
+          "desc": "围绕“张月选安崎投了40票而淡淡投了0”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "425113",
+          "url": "https://s.weibo.com/weibo?q=%E5%BC%A0%E6%9C%88%E9%80%89%E5%AE%89%E5%B4%8E%E6%8A%95%E4%BA%8640%E7%A5%A8%E8%80%8C%E6%B7%A1%E6%B7%A1%E6%8A%95%E4%BA%860&t=31&band_rank=7&Refer=top"
+        },
+        {
+          "title": "鸿蒙7 新",
+          "desc": "围绕“鸿蒙7 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "306326",
+          "url": "https://s.weibo.com/weibo?q=%E9%B8%BF%E8%92%997&t=31&band_rank=8&Refer=top"
+        },
+        {
+          "title": "给阿嬷的情书男主王彦桐签约壹心娱乐",
+          "desc": "围绕“给阿嬷的情书男主王彦桐签约壹心娱乐”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "305705",
+          "url": "https://s.weibo.com/weibo?q=%E7%BB%99%E9%98%BF%E5%AC%B7%E7%9A%84%E6%83%85%E4%B9%A6%E7%94%B7%E4%B8%BB%E7%8E%8B%E5%BD%A6%E6%A1%90%E7%AD%BE%E7%BA%A6%E5%A3%B9%E5%BF%83%E5%A8%B1%E4%B9%90&t=31&band_rank=9&Refer=top"
+        },
+        {
+          "title": "蒙淇淇是学法律的 新",
+          "desc": "围绕“蒙淇淇是学法律的 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "303911",
+          "url": "https://s.weibo.com/weibo?q=%E8%92%99%E6%B7%87%E6%B7%87%E6%98%AF%E5%AD%A6%E6%B3%95%E5%BE%8B%E7%9A%84&t=31&band_rank=10&Refer=top"
+        },
+        {
+          "title": "A股 新",
+          "desc": "围绕“A股 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "财经",
+          "heat": "303219",
+          "url": "https://s.weibo.com/weibo?q=A%E8%82%A1&t=31&band_rank=11&Refer=top"
+        },
+        {
+          "title": "华为鸿蒙7首次亮相 新",
+          "desc": "围绕“华为鸿蒙7首次亮相 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "301163",
+          "url": "https://s.weibo.com/weibo?q=%E5%8D%8E%E4%B8%BA%E9%B8%BF%E8%92%997%E9%A6%96%E6%AC%A1%E4%BA%AE%E7%9B%B8&t=31&band_rank=12&Refer=top"
+        },
+        {
+          "title": "鸿蒙6终端设备数突破6600万 新",
+          "desc": "围绕“鸿蒙6终端设备数突破6600万 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "299578",
+          "url": "https://s.weibo.com/weibo?q=%E9%B8%BF%E8%92%996%E7%BB%88%E7%AB%AF%E8%AE%BE%E5%A4%87%E6%95%B0%E7%AA%81%E7%A0%B46600%E4%B8%87&t=31&band_rank=13&Refer=top"
+        },
+        {
+          "title": "白鹿学历 热",
+          "desc": "围绕“白鹿学历 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "298586",
+          "url": "https://s.weibo.com/weibo?q=%E7%99%BD%E9%B9%BF%E5%AD%A6%E5%8E%86&t=31&band_rank=14&Refer=top"
+        },
+        {
+          "title": "因为饼干太好吃而察觉到不对劲 新",
+          "desc": "围绕“因为饼干太好吃而察觉到不对劲 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "297880",
+          "url": "https://s.weibo.com/weibo?q=%E5%9B%A0%E4%B8%BA%E9%A5%BC%E5%B9%B2%E5%A4%AA%E5%A5%BD%E5%90%83%E8%80%8C%E5%AF%9F%E8%A7%89%E5%88%B0%E4%B8%8D%E5%AF%B9%E5%8A%B2&t=31&band_rank=15&Refer=top"
+        },
+        {
+          "title": "TFBOYS当年全员单吊一所大学",
+          "desc": "围绕“TFBOYS当年全员单吊一所大学”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "296200",
+          "url": "https://s.weibo.com/weibo?q=TFBOYS%E5%BD%93%E5%B9%B4%E5%85%A8%E5%91%98%E5%8D%95%E5%90%8A%E4%B8%80%E6%89%80%E5%A4%A7%E5%AD%A6&t=31&band_rank=16&Refer=top"
+        },
+        {
+          "title": "艺人真名艺名汇总 新",
+          "desc": "围绕“艺人真名艺名汇总 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "293906",
+          "url": "https://s.weibo.com/weibo?q=%E8%89%BA%E4%BA%BA%E7%9C%9F%E5%90%8D%E8%89%BA%E5%90%8D%E6%B1%87%E6%80%BB&t=31&band_rank=17&Refer=top"
+        }
+      ]
+    },
     {
       "slot": "2026-06-12T12:00:00+08:00",
       "label": "06/12 12:00",
@@ -3403,154 +3551,6 @@
           "category": "汽车",
           "heat": "68887",
           "url": "https://s.weibo.com/weibo?q=%E5%8F%B8%E6%9C%BA%E9%81%BF%E5%BC%80%E8%BF%9C%E5%85%89%E7%81%AF%E6%83%8A%E8%A7%81%E5%A4%9A%E4%BA%BA%E8%BD%A6%E9%81%93%E8%81%9A%E9%A4%90&t=31&band_rank=19&Refer=top"
-        }
-      ]
-    },
-    {
-      "slot": "2026-06-09T04:00:00+08:00",
-      "label": "06/09 04:00",
-      "shortLabel": "04:00",
-      "summary": "这一小时热搜主要集中在热议、科技话题，用户更关注最新进展、事件影响和可快速理解的背景信息。",
-      "items": [
-        {
-          "title": "iOS27",
-          "desc": "围绕“iOS27”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "283693",
-          "url": "https://s.weibo.com/weibo?q=iOS27&t=31&band_rank=1&Refer=top"
-        },
-        {
-          "title": "为什么面试要填家庭成员信息",
-          "desc": "围绕“为什么面试要填家庭成员信息”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "131754",
-          "url": "https://s.weibo.com/weibo?q=%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9D%A2%E8%AF%95%E8%A6%81%E5%A1%AB%E5%AE%B6%E5%BA%AD%E6%88%90%E5%91%98%E4%BF%A1%E6%81%AF&t=31&band_rank=1&Refer=top"
-        },
-        {
-          "title": "平壤各界群众和少年儿童身着节日盛装",
-          "desc": "围绕“平壤各界群众和少年儿童身着节日盛装”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "111735",
-          "url": "https://s.weibo.com/weibo?q=%E5%B9%B3%E5%A3%A4%E5%90%84%E7%95%8C%E7%BE%A4%E4%BC%97%E5%92%8C%E5%B0%91%E5%B9%B4%E5%84%BF%E7%AB%A5%E8%BA%AB%E7%9D%80%E8%8A%82%E6%97%A5%E7%9B%9B%E8%A3%85&t=31&band_rank=2&Refer=top"
-        },
-        {
-          "title": "双胞胎姐妹遭袭一死一伤案最新进展 热",
-          "desc": "围绕“双胞胎姐妹遭袭一死一伤案最新进展 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "105835",
-          "url": "https://s.weibo.com/weibo?q=%E5%8F%8C%E8%83%9E%E8%83%8E%E5%A7%90%E5%A6%B9%E9%81%AD%E8%A2%AD%E4%B8%80%E6%AD%BB%E4%B8%80%E4%BC%A4%E6%A1%88%E6%9C%80%E6%96%B0%E8%BF%9B%E5%B1%95&t=31&band_rank=3&Refer=top"
-        },
-        {
-          "title": "Siri AI",
-          "desc": "围绕“Siri AI”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "科技",
-          "heat": "97090",
-          "url": "https://s.weibo.com/weibo?q=Siri%20AI&t=31&band_rank=4&Refer=top"
-        },
-        {
-          "title": "张月的情商",
-          "desc": "围绕“张月的情商”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "84075",
-          "url": "https://s.weibo.com/weibo?q=%E5%BC%A0%E6%9C%88%E7%9A%84%E6%83%85%E5%95%86&t=31&band_rank=5&Refer=top"
-        },
-        {
-          "title": "哈兰德代言王老吉WALOVI",
-          "desc": "围绕“哈兰德代言王老吉WALOVI”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "83167",
-          "url": "https://s.weibo.com/weibo?q=%E5%93%88%E5%85%B0%E5%BE%B7%E4%BB%A3%E8%A8%80%E7%8E%8B%E8%80%81%E5%90%89WALOVI&t=31&band_rank=5&Refer=top"
-        },
-        {
-          "title": "人在什么状态下学习效率最高",
-          "desc": "围绕“人在什么状态下学习效率最高”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "61368",
-          "url": "https://s.weibo.com/weibo?q=%E4%BA%BA%E5%9C%A8%E4%BB%80%E4%B9%88%E7%8A%B6%E6%80%81%E4%B8%8B%E5%AD%A6%E4%B9%A0%E6%95%88%E7%8E%87%E6%9C%80%E9%AB%98&t=31&band_rank=6&Refer=top"
-        },
-        {
-          "title": "全新Siri暂未入华 新",
-          "desc": "围绕“全新Siri暂未入华 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "58494",
-          "url": "https://s.weibo.com/weibo?q=%E5%85%A8%E6%96%B0Siri%E6%9A%82%E6%9C%AA%E5%85%A5%E5%8D%8E&t=31&band_rank=7&Refer=top"
-        },
-        {
-          "title": "跑男团全员包场白鹿莫离",
-          "desc": "围绕“跑男团全员包场白鹿莫离”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "52789",
-          "url": "https://s.weibo.com/weibo?q=%E8%B7%91%E7%94%B7%E5%9B%A2%E5%85%A8%E5%91%98%E5%8C%85%E5%9C%BA%E7%99%BD%E9%B9%BF%E8%8E%AB%E7%A6%BB&t=31&band_rank=8&Refer=top"
-        },
-        {
-          "title": "苹果开发者大会",
-          "desc": "围绕“苹果开发者大会”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "52744",
-          "url": "https://s.weibo.com/weibo?q=%E8%8B%B9%E6%9E%9C%E5%BC%80%E5%8F%91%E8%80%85%E5%A4%A7%E4%BC%9A&t=31&band_rank=9&Refer=top"
-        },
-        {
-          "title": "全世界倒数第一体面的运动 热",
-          "desc": "围绕“全世界倒数第一体面的运动 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "52082",
-          "url": "https://s.weibo.com/weibo?q=%E5%85%A8%E4%B8%96%E7%95%8C%E5%80%92%E6%95%B0%E7%AC%AC%E4%B8%80%E4%BD%93%E9%9D%A2%E7%9A%84%E8%BF%90%E5%8A%A8&t=31&band_rank=10&Refer=top"
-        },
-        {
-          "title": "金饰克价跌400元却没人买了 热",
-          "desc": "围绕“金饰克价跌400元却没人买了 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "51831",
-          "url": "https://s.weibo.com/weibo?q=%E9%87%91%E9%A5%B0%E5%85%8B%E4%BB%B7%E8%B7%8C400%E5%85%83%E5%8D%B4%E6%B2%A1%E4%BA%BA%E4%B9%B0%E4%BA%86&t=31&band_rank=11&Refer=top"
-        },
-        {
-          "title": "张月方停止浪姐选歌",
-          "desc": "围绕“张月方停止浪姐选歌”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "51640",
-          "url": "https://s.weibo.com/weibo?q=%E5%BC%A0%E6%9C%88%E6%96%B9%E5%81%9C%E6%AD%A2%E6%B5%AA%E5%A7%90%E9%80%89%E6%AD%8C&t=31&band_rank=12&Refer=top"
-        },
-        {
-          "title": "前同事离职忘记删聊天记录",
-          "desc": "围绕“前同事离职忘记删聊天记录”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "51011",
-          "url": "https://s.weibo.com/weibo?q=%E5%89%8D%E5%90%8C%E4%BA%8B%E7%A6%BB%E8%81%8C%E5%BF%98%E8%AE%B0%E5%88%A0%E8%81%8A%E5%A4%A9%E8%AE%B0%E5%BD%95&t=31&band_rank=13&Refer=top"
-        },
-        {
-          "title": "高考作文 给阿嬷的情书",
-          "desc": "围绕“高考作文 给阿嬷的情书”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "50934",
-          "url": "https://s.weibo.com/weibo?q=%E9%AB%98%E8%80%83%E4%BD%9C%E6%96%87%20%E7%BB%99%E9%98%BF%E5%AC%B7%E7%9A%84%E6%83%85%E4%B9%A6&t=31&band_rank=14&Refer=top"
-        },
-        {
-          "title": "macOS金门 新",
-          "desc": "围绕“macOS金门 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "46534",
-          "url": "https://s.weibo.com/weibo?q=macOS%E9%87%91%E9%97%A8&t=31&band_rank=15&Refer=top"
-        },
-        {
-          "title": "王鹤棣包场白鹿莫离",
-          "desc": "围绕“王鹤棣包场白鹿莫离”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "42260",
-          "url": "https://s.weibo.com/weibo?q=%E7%8E%8B%E9%B9%A4%E6%A3%A3%E5%8C%85%E5%9C%BA%E7%99%BD%E9%B9%BF%E8%8E%AB%E7%A6%BB&t=31&band_rank=16&Refer=top"
-        },
-        {
-          "title": "奔跑吧",
-          "desc": "围绕“奔跑吧”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "38964",
-          "url": "https://s.weibo.com/weibo?q=%E5%A5%94%E8%B7%91%E5%90%A7&t=31&band_rank=17&Refer=top"
-        },
-        {
-          "title": "郑钦文vs克里斯蒂安",
-          "desc": "围绕“郑钦文vs克里斯蒂安”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "37827",
-          "url": "https://s.weibo.com/weibo?q=%E9%83%91%E9%92%A6%E6%96%87vs%E5%85%8B%E9%87%8C%E6%96%AF%E8%92%82%E5%AE%89&t=31&band_rank=18&Refer=top"
         }
       ]
     }
