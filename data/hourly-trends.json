@@ -1,6 +1,6 @@
 {
   "source": "微博热搜 + 规则摘要",
-  "updatedAt": "2026-07-14T23:03:02.878Z",
+  "updatedAt": "2026-07-14T23:59:45.428Z",
   "hours": [
     {
       "slot": "2026-07-15T07:00:00+08:00",
@@ -9,144 +9,144 @@
       "summary": "这一小时热搜主要集中在热议话题，用户更关注最新进展、事件影响和可快速理解的背景信息。",
       "items": [
         {
-          "title": "姆巴佩心态崩了 热",
-          "desc": "围绕“姆巴佩心态崩了 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "title": "姆巴佩心态崩了 爆",
+          "desc": "围绕“姆巴佩心态崩了 爆”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
           "category": "热议",
-          "heat": "3175210",
+          "heat": "12062356",
           "url": "https://s.weibo.com/weibo?q=%E5%A7%86%E5%B7%B4%E4%BD%A9%E5%BF%83%E6%80%81%E5%B4%A9%E4%BA%86&t=31&band_rank=1&Refer=top"
-        },
-        {
-          "title": "法国0比2西班牙 热",
-          "desc": "围绕“法国0比2西班牙 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "2311761",
-          "url": "https://s.weibo.com/weibo?q=%E6%B3%95%E5%9B%BD0%E6%AF%942%E8%A5%BF%E7%8F%AD%E7%89%99&t=31&band_rank=1&Refer=top"
-        },
-        {
-          "title": "惠民生促消费双向发力",
-          "desc": "围绕“惠民生促消费双向发力”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "1690538",
-          "url": "https://s.weibo.com/weibo?q=%E6%83%A0%E6%B0%91%E7%94%9F%E4%BF%83%E6%B6%88%E8%B4%B9%E5%8F%8C%E5%90%91%E5%8F%91%E5%8A%9B&t=31&band_rank=2&Refer=top"
         },
         {
           "title": "佛得角的含金量还在上升 热",
           "desc": "围绕“佛得角的含金量还在上升 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
           "category": "热议",
-          "heat": "1099140",
-          "url": "https://s.weibo.com/weibo?q=%E4%BD%9B%E5%BE%97%E8%A7%92%E7%9A%84%E5%90%AB%E9%87%91%E9%87%8F%E8%BF%98%E5%9C%A8%E4%B8%8A%E5%8D%87&t=31&band_rank=3&Refer=top"
+          "heat": "2241240",
+          "url": "https://s.weibo.com/weibo?q=%E4%BD%9B%E5%BE%97%E8%A7%92%E7%9A%84%E5%90%AB%E9%87%91%E9%87%8F%E8%BF%98%E5%9C%A8%E4%B8%8A%E5%8D%87&t=31&band_rank=1&Refer=top"
         },
         {
-          "title": "法国 大热必死 热",
-          "desc": "围绕“法国 大热必死 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "title": "惠民生促消费双向发力",
+          "desc": "围绕“惠民生促消费双向发力”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
           "category": "热议",
-          "heat": "864944",
-          "url": "https://s.weibo.com/weibo?q=%E6%B3%95%E5%9B%BD%20%E5%A4%A7%E7%83%AD%E5%BF%85%E6%AD%BB&t=31&band_rank=4&Refer=top"
+          "heat": "1795760",
+          "url": "https://s.weibo.com/weibo?q=%E6%83%A0%E6%B0%91%E7%94%9F%E4%BF%83%E6%B6%88%E8%B4%B9%E5%8F%8C%E5%90%91%E5%8F%91%E5%8A%9B&t=31&band_rank=2&Refer=top"
         },
         {
-          "title": "西班牙 极致传控",
-          "desc": "围绕“西班牙 极致传控”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "title": "上淘宝闪购和张凌赫悦享一夏",
+          "desc": "围绕“上淘宝闪购和张凌赫悦享一夏”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
           "category": "热议",
-          "heat": "457998",
-          "url": "https://s.weibo.com/weibo?q=%E8%A5%BF%E7%8F%AD%E7%89%99%20%E6%9E%81%E8%87%B4%E4%BC%A0%E6%8E%A7&t=31&band_rank=5&Refer=top"
+          "heat": "1730345",
+          "url": "https://s.weibo.com/weibo?q=%E4%B8%8A%E6%B7%98%E5%AE%9D%E9%97%AA%E8%B4%AD%E5%92%8C%E5%BC%A0%E5%87%8C%E8%B5%AB%E6%82%A6%E4%BA%AB%E4%B8%80%E5%A4%8F&t=31&band_rank=2&Refer=top"
         },
         {
-          "title": "亚马尔铲翻姆巴佩",
-          "desc": "围绕“亚马尔铲翻姆巴佩”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "title": "法国连续三年被西班牙淘汰 新",
+          "desc": "围绕“法国连续三年被西班牙淘汰 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
           "category": "热议",
-          "heat": "421451",
-          "url": "https://s.weibo.com/weibo?q=%E4%BA%9A%E9%A9%AC%E5%B0%94%E9%93%B2%E7%BF%BB%E5%A7%86%E5%B7%B4%E4%BD%A9&t=31&band_rank=6&Refer=top"
+          "heat": "1410961",
+          "url": "https://s.weibo.com/weibo?q=%E6%B3%95%E5%9B%BD%E8%BF%9E%E7%BB%AD%E4%B8%89%E5%B9%B4%E8%A2%AB%E8%A5%BF%E7%8F%AD%E7%89%99%E6%B7%98%E6%B1%B0&t=31&band_rank=3&Refer=top"
         },
         {
-          "title": "法国回应淘汰 新",
-          "desc": "围绕“法国回应淘汰 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "title": "法国0比2西班牙",
+          "desc": "围绕“法国0比2西班牙”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
           "category": "热议",
-          "heat": "395897",
-          "url": "https://s.weibo.com/weibo?q=%E6%B3%95%E5%9B%BD%E5%9B%9E%E5%BA%94%E6%B7%98%E6%B1%B0&t=31&band_rank=7&Refer=top"
+          "heat": "1203235",
+          "url": "https://s.weibo.com/weibo?q=%E6%B3%95%E5%9B%BD0%E6%AF%942%E8%A5%BF%E7%8F%AD%E7%89%99&t=31&band_rank=4&Refer=top"
+        },
+        {
+          "title": "亚马尔九擒姆巴佩 新",
+          "desc": "围绕“亚马尔九擒姆巴佩 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "1135959",
+          "url": "https://s.weibo.com/weibo?q=%E4%BA%9A%E9%A9%AC%E5%B0%94%E4%B9%9D%E6%93%92%E5%A7%86%E5%B7%B4%E4%BD%A9&t=31&band_rank=5&Refer=top"
+        },
+        {
+          "title": "法国 大热必死",
+          "desc": "围绕“法国 大热必死”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "716857",
+          "url": "https://s.weibo.com/weibo?q=%E6%B3%95%E5%9B%BD%20%E5%A4%A7%E7%83%AD%E5%BF%85%E6%AD%BB&t=31&band_rank=6&Refer=top"
         },
         {
           "title": "暑期档长剧 裸播 热",
           "desc": "围绕“暑期档长剧 裸播 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
           "category": "热议",
-          "heat": "370606",
-          "url": "https://s.weibo.com/weibo?q=%E6%9A%91%E6%9C%9F%E6%A1%A3%E9%95%BF%E5%89%A7%20%E8%A3%B8%E6%92%AD&t=31&band_rank=8&Refer=top"
+          "heat": "437334",
+          "url": "https://s.weibo.com/weibo?q=%E6%9A%91%E6%9C%9F%E6%A1%A3%E9%95%BF%E5%89%A7%20%E8%A3%B8%E6%92%AD&t=31&band_rank=7&Refer=top"
         },
         {
           "title": "迪丽热巴听到周星驰女儿的表情",
           "desc": "围绕“迪丽热巴听到周星驰女儿的表情”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
           "category": "热议",
-          "heat": "343761",
-          "url": "https://s.weibo.com/weibo?q=%E8%BF%AA%E4%B8%BD%E7%83%AD%E5%B7%B4%E5%90%AC%E5%88%B0%E5%91%A8%E6%98%9F%E9%A9%B0%E5%A5%B3%E5%84%BF%E7%9A%84%E8%A1%A8%E6%83%85&t=31&band_rank=9&Refer=top"
+          "heat": "235982",
+          "url": "https://s.weibo.com/weibo?q=%E8%BF%AA%E4%B8%BD%E7%83%AD%E5%B7%B4%E5%90%AC%E5%88%B0%E5%91%A8%E6%98%9F%E9%A9%B0%E5%A5%B3%E5%84%BF%E7%9A%84%E8%A1%A8%E6%83%85&t=31&band_rank=8&Refer=top"
+        },
+        {
+          "title": "刘旭东 新",
+          "desc": "围绕“刘旭东 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "235741",
+          "url": "https://s.weibo.com/weibo?q=%E5%88%98%E6%97%AD%E4%B8%9C&t=31&band_rank=9&Refer=top"
+        },
+        {
+          "title": "法国回应淘汰 新",
+          "desc": "围绕“法国回应淘汰 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "235419",
+          "url": "https://s.weibo.com/weibo?q=%E6%B3%95%E5%9B%BD%E5%9B%9E%E5%BA%94%E6%B7%98%E6%B1%B0&t=31&band_rank=10&Refer=top"
+        },
+        {
+          "title": "赵本山已彻底退出演艺工作 新",
+          "desc": "围绕“赵本山已彻底退出演艺工作 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "235281",
+          "url": "https://s.weibo.com/weibo?q=%E8%B5%B5%E6%9C%AC%E5%B1%B1%E5%B7%B2%E5%BD%BB%E5%BA%95%E9%80%80%E5%87%BA%E6%BC%94%E8%89%BA%E5%B7%A5%E4%BD%9C&t=31&band_rank=11&Refer=top"
         },
         {
           "title": "遭婚闹九级伤残伴娘被从柜子中拖出 热",
           "desc": "围绕“遭婚闹九级伤残伴娘被从柜子中拖出 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
           "category": "热议",
-          "heat": "336558",
-          "url": "https://s.weibo.com/weibo?q=%E9%81%AD%E5%A9%9A%E9%97%B9%E4%B9%9D%E7%BA%A7%E4%BC%A4%E6%AE%8B%E4%BC%B4%E5%A8%98%E8%A2%AB%E4%BB%8E%E6%9F%9C%E5%AD%90%E4%B8%AD%E6%8B%96%E5%87%BA&t=31&band_rank=10&Refer=top"
-        },
-        {
-          "title": "法国淘汰",
-          "desc": "围绕“法国淘汰”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "294587",
-          "url": "https://s.weibo.com/weibo?q=%E6%B3%95%E5%9B%BD%E6%B7%98%E6%B1%B0&t=31&band_rank=11&Refer=top"
+          "heat": "234998",
+          "url": "https://s.weibo.com/weibo?q=%E9%81%AD%E5%A9%9A%E9%97%B9%E4%B9%9D%E7%BA%A7%E4%BC%A4%E6%AE%8B%E4%BC%B4%E5%A8%98%E8%A2%AB%E4%BB%8E%E6%9F%9C%E5%AD%90%E4%B8%AD%E6%8B%96%E5%87%BA&t=31&band_rank=12&Refer=top"
         },
         {
           "title": "法国vs西班牙",
           "desc": "围绕“法国vs西班牙”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
           "category": "热议",
-          "heat": "291434",
-          "url": "https://s.weibo.com/weibo?q=%E6%B3%95%E5%9B%BDvs%E8%A5%BF%E7%8F%AD%E7%89%99&t=31&band_rank=12&Refer=top"
+          "heat": "234382",
+          "url": "https://s.weibo.com/weibo?q=%E6%B3%95%E5%9B%BDvs%E8%A5%BF%E7%8F%AD%E7%89%99&t=31&band_rank=13&Refer=top"
         },
         {
-          "title": "给亚马尔装到了",
-          "desc": "围绕“给亚马尔装到了”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "title": "亚马尔数据",
+          "desc": "围绕“亚马尔数据”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
           "category": "热议",
-          "heat": "272281",
-          "url": "https://s.weibo.com/weibo?q=%E7%BB%99%E4%BA%9A%E9%A9%AC%E5%B0%94%E8%A3%85%E5%88%B0%E4%BA%86&t=31&band_rank=13&Refer=top"
-        },
-        {
-          "title": "亚马尔数据 新",
-          "desc": "围绕“亚马尔数据 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "257238",
+          "heat": "234314",
           "url": "https://s.weibo.com/weibo?q=%E4%BA%9A%E9%A9%AC%E5%B0%94%E6%95%B0%E6%8D%AE&t=31&band_rank=14&Refer=top"
-        },
-        {
-          "title": "老人买肉买走了最难卖的一块",
-          "desc": "围绕“老人买肉买走了最难卖的一块”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "247091",
-          "url": "https://s.weibo.com/weibo?q=%E8%80%81%E4%BA%BA%E4%B9%B0%E8%82%89%E4%B9%B0%E8%B5%B0%E4%BA%86%E6%9C%80%E9%9A%BE%E5%8D%96%E7%9A%84%E4%B8%80%E5%9D%97&t=31&band_rank=15&Refer=top"
-        },
-        {
-          "title": "法国 梦游",
-          "desc": "围绕“法国 梦游”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "194686",
-          "url": "https://s.weibo.com/weibo?q=%E6%B3%95%E5%9B%BD%20%E6%A2%A6%E6%B8%B8&t=31&band_rank=16&Refer=top"
         },
         {
           "title": "江浙沪孩子最苦的可能就是退休后",
           "desc": "围绕“江浙沪孩子最苦的可能就是退休后”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
           "category": "热议",
-          "heat": "192783",
-          "url": "https://s.weibo.com/weibo?q=%E6%B1%9F%E6%B5%99%E6%B2%AA%E5%AD%A9%E5%AD%90%E6%9C%80%E8%8B%A6%E7%9A%84%E5%8F%AF%E8%83%BD%E5%B0%B1%E6%98%AF%E9%80%80%E4%BC%91%E5%90%8E&t=31&band_rank=17&Refer=top"
+          "heat": "233766",
+          "url": "https://s.weibo.com/weibo?q=%E6%B1%9F%E6%B5%99%E6%B2%AA%E5%AD%A9%E5%AD%90%E6%9C%80%E8%8B%A6%E7%9A%84%E5%8F%AF%E8%83%BD%E5%B0%B1%E6%98%AF%E9%80%80%E4%BC%91%E5%90%8E&t=31&band_rank=15&Refer=top"
         },
         {
-          "title": "内娱请把古偶还给少男少女",
-          "desc": "围绕“内娱请把古偶还给少男少女”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "title": "张小斐中国首位票房破百亿85花 新",
+          "desc": "围绕“张小斐中国首位票房破百亿85花 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
           "category": "热议",
-          "heat": "192762",
-          "url": "https://s.weibo.com/weibo?q=%E5%86%85%E5%A8%B1%E8%AF%B7%E6%8A%8A%E5%8F%A4%E5%81%B6%E8%BF%98%E7%BB%99%E5%B0%91%E7%94%B7%E5%B0%91%E5%A5%B3&t=31&band_rank=18&Refer=top"
+          "heat": "233726",
+          "url": "https://s.weibo.com/weibo?q=%E5%BC%A0%E5%B0%8F%E6%96%90%E4%B8%AD%E5%9B%BD%E9%A6%96%E4%BD%8D%E7%A5%A8%E6%88%BF%E7%A0%B4%E7%99%BE%E4%BA%BF85%E8%8A%B1&t=31&band_rank=16&Refer=top"
+        },
+        {
+          "title": "入伏 新",
+          "desc": "围绕“入伏 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "233306",
+          "url": "https://s.weibo.com/weibo?q=%E5%85%A5%E4%BC%8F&t=31&band_rank=17&Refer=top"
         },
         {
           "title": "长鑫科技公告",
           "desc": "围绕“长鑫科技公告”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
           "category": "热议",
-          "heat": "192757",
-          "url": "https://s.weibo.com/weibo?q=%E9%95%BF%E9%91%AB%E7%A7%91%E6%8A%80%E5%85%AC%E5%91%8A&t=31&band_rank=19&Refer=top"
+          "heat": "233001",
+          "url": "https://s.weibo.com/weibo?q=%E9%95%BF%E9%91%AB%E7%A7%91%E6%8A%80%E5%85%AC%E5%91%8A&t=31&band_rank=18&Refer=top"
         }
       ]
     },
