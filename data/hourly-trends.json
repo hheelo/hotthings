@@ -1,7 +1,155 @@
 {
   "source": "微博热搜 + 规则摘要",
-  "updatedAt": "2026-08-09T09:43:42.470Z",
+  "updatedAt": "2026-08-09T10:38:32.656Z",
   "hours": [
+    {
+      "slot": "2026-08-09T18:00:00+08:00",
+      "label": "08/09 18:00",
+      "shortLabel": "18:00",
+      "summary": "这一小时热搜主要集中在热议话题，用户更关注最新进展、事件影响和可快速理解的背景信息。",
+      "items": [
+        {
+          "title": "白海豚提前登陆 热",
+          "desc": "围绕“白海豚提前登陆 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "3810882",
+          "url": "https://s.weibo.com/weibo?q=%E7%99%BD%E6%B5%B7%E8%B1%9A%E6%8F%90%E5%89%8D%E7%99%BB%E9%99%86&t=31&band_rank=1&Refer=top"
+        },
+        {
+          "title": "台州玉环 捅了台风窝 新",
+          "desc": "围绕“台州玉环 捅了台风窝 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "1443876",
+          "url": "https://s.weibo.com/weibo?q=%E5%8F%B0%E5%B7%9E%E7%8E%89%E7%8E%AF%20%E6%8D%85%E4%BA%86%E5%8F%B0%E9%A3%8E%E7%AA%9D&t=31&band_rank=1&Refer=top"
+        },
+        {
+          "title": "一组数据读懂中国经济底气",
+          "desc": "围绕“一组数据读懂中国经济底气”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "1389755",
+          "url": "https://s.weibo.com/weibo?q=%E4%B8%80%E7%BB%84%E6%95%B0%E6%8D%AE%E8%AF%BB%E6%87%82%E4%B8%AD%E5%9B%BD%E7%BB%8F%E6%B5%8E%E5%BA%95%E6%B0%94&t=31&band_rank=2&Refer=top"
+        },
+        {
+          "title": "上海市要求及时果断停课停工 热",
+          "desc": "围绕“上海市要求及时果断停课停工 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "1378588",
+          "url": "https://s.weibo.com/weibo?q=%E4%B8%8A%E6%B5%B7%E5%B8%82%E8%A6%81%E6%B1%82%E5%8F%8A%E6%97%B6%E6%9E%9C%E6%96%AD%E5%81%9C%E8%AF%BE%E5%81%9C%E5%B7%A5&t=31&band_rank=3&Refer=top"
+        },
+        {
+          "title": "台风琵鹭来了",
+          "desc": "围绕“台风琵鹭来了”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "700192",
+          "url": "https://s.weibo.com/weibo?q=%E5%8F%B0%E9%A3%8E%E7%90%B5%E9%B9%AD%E6%9D%A5%E4%BA%86&t=31&band_rank=4&Refer=top"
+        },
+        {
+          "title": "工资5000能存4999的吃法",
+          "desc": "围绕“工资5000能存4999的吃法”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "684238",
+          "url": "https://s.weibo.com/weibo?q=%E5%B7%A5%E8%B5%845000%E8%83%BD%E5%AD%984999%E7%9A%84%E5%90%83%E6%B3%95&t=31&band_rank=5&Refer=top"
+        },
+        {
+          "title": "中国留学生写差评的方式太隐晦了",
+          "desc": "围绕“中国留学生写差评的方式太隐晦了”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "649534",
+          "url": "https://s.weibo.com/weibo?q=%E4%B8%AD%E5%9B%BD%E7%95%99%E5%AD%A6%E7%94%9F%E5%86%99%E5%B7%AE%E8%AF%84%E7%9A%84%E6%96%B9%E5%BC%8F%E5%A4%AA%E9%9A%90%E6%99%A6%E4%BA%86&t=31&band_rank=6&Refer=top"
+        },
+        {
+          "title": "苏醒 控制内娱几乎实锤了 热",
+          "desc": "围绕“苏醒 控制内娱几乎实锤了 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "610571",
+          "url": "https://s.weibo.com/weibo?q=%E8%8B%8F%E9%86%92%20%E6%8E%A7%E5%88%B6%E5%86%85%E5%A8%B1%E5%87%A0%E4%B9%8E%E5%AE%9E%E9%94%A4%E4%BA%86&t=31&band_rank=7&Refer=top"
+        },
+        {
+          "title": "耳机左右耳电量未解之谜 新",
+          "desc": "围绕“耳机左右耳电量未解之谜 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "460348",
+          "url": "https://s.weibo.com/weibo?q=%E8%80%B3%E6%9C%BA%E5%B7%A6%E5%8F%B3%E8%80%B3%E7%94%B5%E9%87%8F%E6%9C%AA%E8%A7%A3%E4%B9%8B%E8%B0%9C&t=31&band_rank=8&Refer=top"
+        },
+        {
+          "title": "王传君潮得有点不敢认了 新",
+          "desc": "围绕“王传君潮得有点不敢认了 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "456298",
+          "url": "https://s.weibo.com/weibo?q=%E7%8E%8B%E4%BC%A0%E5%90%9B%E6%BD%AE%E5%BE%97%E6%9C%89%E7%82%B9%E4%B8%8D%E6%95%A2%E8%AE%A4%E4%BA%86&t=31&band_rank=9&Refer=top"
+        },
+        {
+          "title": "老坛酸菜 脚踩 热",
+          "desc": "围绕“老坛酸菜 脚踩 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "452866",
+          "url": "https://s.weibo.com/weibo?q=%E8%80%81%E5%9D%9B%E9%85%B8%E8%8F%9C%20%E8%84%9A%E8%B8%A9&t=31&band_rank=10&Refer=top"
+        },
+        {
+          "title": "田曦薇没刘海差点认不出来 热",
+          "desc": "围绕“田曦薇没刘海差点认不出来 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "447305",
+          "url": "https://s.weibo.com/weibo?q=%E7%94%B0%E6%9B%A6%E8%96%87%E6%B2%A1%E5%88%98%E6%B5%B7%E5%B7%AE%E7%82%B9%E8%AE%A4%E4%B8%8D%E5%87%BA%E6%9D%A5&t=31&band_rank=11&Refer=top"
+        },
+        {
+          "title": "寒山寺猫咪吵架回头全是人",
+          "desc": "围绕“寒山寺猫咪吵架回头全是人”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "441724",
+          "url": "https://s.weibo.com/weibo?q=%E5%AF%92%E5%B1%B1%E5%AF%BA%E7%8C%AB%E5%92%AA%E5%90%B5%E6%9E%B6%E5%9B%9E%E5%A4%B4%E5%85%A8%E6%98%AF%E4%BA%BA&t=31&band_rank=12&Refer=top"
+        },
+        {
+          "title": "刘耀文百花奖人没到但感言到了",
+          "desc": "围绕“刘耀文百花奖人没到但感言到了”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "436621",
+          "url": "https://s.weibo.com/weibo?q=%E5%88%98%E8%80%80%E6%96%87%E7%99%BE%E8%8A%B1%E5%A5%96%E4%BA%BA%E6%B2%A1%E5%88%B0%E4%BD%86%E6%84%9F%E8%A8%80%E5%88%B0%E4%BA%86&t=31&band_rank=13&Refer=top"
+        },
+        {
+          "title": "郑雅贤回应裙子穿反了 新",
+          "desc": "围绕“郑雅贤回应裙子穿反了 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "434556",
+          "url": "https://s.weibo.com/weibo?q=%E9%83%91%E9%9B%85%E8%B4%A4%E5%9B%9E%E5%BA%94%E8%A3%99%E5%AD%90%E7%A9%BF%E5%8F%8D%E4%BA%86&t=31&band_rank=14&Refer=top"
+        },
+        {
+          "title": "原来性格还会影响一个人的声音",
+          "desc": "围绕“原来性格还会影响一个人的声音”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "428690",
+          "url": "https://s.weibo.com/weibo?q=%E5%8E%9F%E6%9D%A5%E6%80%A7%E6%A0%BC%E8%BF%98%E4%BC%9A%E5%BD%B1%E5%93%8D%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9A%84%E5%A3%B0%E9%9F%B3&t=31&band_rank=15&Refer=top"
+        },
+        {
+          "title": "白海豚 龙卷风",
+          "desc": "围绕“白海豚 龙卷风”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "374303",
+          "url": "https://s.weibo.com/weibo?q=%E7%99%BD%E6%B5%B7%E8%B1%9A%20%E9%BE%99%E5%8D%B7%E9%A3%8E&t=31&band_rank=16&Refer=top"
+        },
+        {
+          "title": "BLG官宣Flandre加入",
+          "desc": "围绕“BLG官宣Flandre加入”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "303823",
+          "url": "https://s.weibo.com/weibo?q=BLG%E5%AE%98%E5%AE%A3Flandre%E5%8A%A0%E5%85%A5&t=31&band_rank=17&Refer=top"
+        },
+        {
+          "title": "在泰被杀男子是中国豪华游艇商之子",
+          "desc": "围绕“在泰被杀男子是中国豪华游艇商之子”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "302679",
+          "url": "https://s.weibo.com/weibo?q=%E5%9C%A8%E6%B3%B0%E8%A2%AB%E6%9D%80%E7%94%B7%E5%AD%90%E6%98%AF%E4%B8%AD%E5%9B%BD%E8%B1%AA%E5%8D%8E%E6%B8%B8%E8%89%87%E5%95%86%E4%B9%8B%E5%AD%90&t=31&band_rank=18&Refer=top"
+        },
+        {
+          "title": "郑雅贤为中文回复道歉 新",
+          "desc": "围绕“郑雅贤为中文回复道歉 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
+          "category": "热议",
+          "heat": "301413",
+          "url": "https://s.weibo.com/weibo?q=%E9%83%91%E9%9B%85%E8%B4%A4%E4%B8%BA%E4%B8%AD%E6%96%87%E5%9B%9E%E5%A4%8D%E9%81%93%E6%AD%89&t=31&band_rank=19&Refer=top"
+        }
+      ]
+    },
     {
       "slot": "2026-08-09T17:00:00+08:00",
       "label": "08/09 17:00",
@@ -3403,154 +3551,6 @@
           "category": "热议",
           "heat": "376314",
           "url": "https://s.weibo.com/weibo?q=%E5%85%B3%E6%99%93%E5%BD%A4%E5%B7%B2%E5%88%B0%E6%9C%80%E4%BD%B3%E8%B5%8F%E5%91%B3%E6%9C%9F&t=31&band_rank=18&Refer=top"
-        }
-      ]
-    },
-    {
-      "slot": "2026-08-08T14:00:00+08:00",
-      "label": "08/08 14:00",
-      "shortLabel": "14:00",
-      "summary": "这一小时热搜主要集中在热议、数码、科技话题，用户更关注最新进展、事件影响和可快速理解的背景信息。",
-      "items": [
-        {
-          "title": "暑期档 撤档 热",
-          "desc": "围绕“暑期档 撤档 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "1640860",
-          "url": "https://s.weibo.com/weibo?q=%E6%9A%91%E6%9C%9F%E6%A1%A3%20%E6%92%A4%E6%A1%A3&t=31&band_rank=1&Refer=top"
-        },
-        {
-          "title": "白海豚已闭眼",
-          "desc": "围绕“白海豚已闭眼”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "926557",
-          "url": "https://s.weibo.com/weibo?q=%E7%99%BD%E6%B5%B7%E8%B1%9A%E5%B7%B2%E9%97%AD%E7%9C%BC&t=31&band_rank=1&Refer=top"
-        },
-        {
-          "title": "健康是生命最好的礼物",
-          "desc": "围绕“健康是生命最好的礼物”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "746532",
-          "url": "https://s.weibo.com/weibo?q=%E5%81%A5%E5%BA%B7%E6%98%AF%E7%94%9F%E5%91%BD%E6%9C%80%E5%A5%BD%E7%9A%84%E7%A4%BC%E7%89%A9&t=31&band_rank=2&Refer=top"
-        },
-        {
-          "title": "Marshall携二手玫瑰守住现场",
-          "desc": "围绕“Marshall携二手玫瑰守住现场”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "715988",
-          "url": "https://s.weibo.com/weibo?q=Marshall%E6%90%BA%E4%BA%8C%E6%89%8B%E7%8E%AB%E7%91%B0%E5%AE%88%E4%BD%8F%E7%8E%B0%E5%9C%BA&t=31&band_rank=2&Refer=top"
-        },
-        {
-          "title": "等风热吻你 新",
-          "desc": "围绕“等风热吻你 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "698048",
-          "url": "https://s.weibo.com/weibo?q=%E7%AD%89%E9%A3%8E%E7%83%AD%E5%90%BB%E4%BD%A0&t=31&band_rank=3&Refer=top"
-        },
-        {
-          "title": "八仙 新",
-          "desc": "围绕“八仙 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "488200",
-          "url": "https://s.weibo.com/weibo?q=%E5%85%AB%E4%BB%99&t=31&band_rank=4&Refer=top"
-        },
-        {
-          "title": "这就是跟老人的有效沟通 新",
-          "desc": "围绕“这就是跟老人的有效沟通 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "431827",
-          "url": "https://s.weibo.com/weibo?q=%E8%BF%99%E5%B0%B1%E6%98%AF%E8%B7%9F%E8%80%81%E4%BA%BA%E7%9A%84%E6%9C%89%E6%95%88%E6%B2%9F%E9%80%9A&t=31&band_rank=5&Refer=top"
-        },
-        {
-          "title": "鞠婧祎凸凸棉品牌全球代言人",
-          "desc": "围绕“鞠婧祎凸凸棉品牌全球代言人”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "397033",
-          "url": "https://s.weibo.com/weibo?q=%E9%9E%A0%E5%A9%A7%E7%A5%8E%E5%87%B8%E5%87%B8%E6%A3%89%E5%93%81%E7%89%8C%E5%85%A8%E7%90%83%E4%BB%A3%E8%A8%80%E4%BA%BA&t=31&band_rank=5&Refer=top"
-        },
-        {
-          "title": "两名海警去年南海黄岩岛维权牺牲 新",
-          "desc": "围绕“两名海警去年南海黄岩岛维权牺牲 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "382821",
-          "url": "https://s.weibo.com/weibo?q=%E4%B8%A4%E5%90%8D%E6%B5%B7%E8%AD%A6%E5%8E%BB%E5%B9%B4%E5%8D%97%E6%B5%B7%E9%BB%84%E5%B2%A9%E5%B2%9B%E7%BB%B4%E6%9D%83%E7%89%BA%E7%89%B2&t=31&band_rank=6&Refer=top"
-        },
-        {
-          "title": "张本智和说面对国乒年轻选手压力消失了",
-          "desc": "围绕“张本智和说面对国乒年轻选手压力消失了”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "367959",
-          "url": "https://s.weibo.com/weibo?q=%E5%BC%A0%E6%9C%AC%E6%99%BA%E5%92%8C%E8%AF%B4%E9%9D%A2%E5%AF%B9%E5%9B%BD%E4%B9%92%E5%B9%B4%E8%BD%BB%E9%80%89%E6%89%8B%E5%8E%8B%E5%8A%9B%E6%B6%88%E5%A4%B1%E4%BA%86&t=31&band_rank=7&Refer=top"
-        },
-        {
-          "title": "白海豚将正面袭击贯穿浙江 新",
-          "desc": "围绕“白海豚将正面袭击贯穿浙江 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "296539",
-          "url": "https://s.weibo.com/weibo?q=%E7%99%BD%E6%B5%B7%E8%B1%9A%E5%B0%86%E6%AD%A3%E9%9D%A2%E8%A2%AD%E5%87%BB%E8%B4%AF%E7%A9%BF%E6%B5%99%E6%B1%9F&t=31&band_rank=8&Refer=top"
-        },
-        {
-          "title": "松岛辉空4比3张禹珍 新",
-          "desc": "围绕“松岛辉空4比3张禹珍 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "296384",
-          "url": "https://s.weibo.com/weibo?q=%E6%9D%BE%E5%B2%9B%E8%BE%89%E7%A9%BA4%E6%AF%943%E5%BC%A0%E7%A6%B9%E7%8F%8D&t=31&band_rank=9&Refer=top"
-        },
-        {
-          "title": "富婆带资进组给自己硬加60多场吻戏 热",
-          "desc": "围绕“富婆带资进组给自己硬加60多场吻戏 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "296248",
-          "url": "https://s.weibo.com/weibo?q=%E5%AF%8C%E5%A9%86%E5%B8%A6%E8%B5%84%E8%BF%9B%E7%BB%84%E7%BB%99%E8%87%AA%E5%B7%B1%E7%A1%AC%E5%8A%A060%E5%A4%9A%E5%9C%BA%E5%90%BB%E6%88%8F&t=31&band_rank=10&Refer=top"
-        },
-        {
-          "title": "刘旸秒删 新",
-          "desc": "围绕“刘旸秒删 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "296023",
-          "url": "https://s.weibo.com/weibo?q=%E5%88%98%E6%97%B8%E7%A7%92%E5%88%A0&t=31&band_rank=11&Refer=top"
-        },
-        {
-          "title": "小心这种手机壳正在偷拍你的隐私 热",
-          "desc": "围绕“小心这种手机壳正在偷拍你的隐私 热”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "数码",
-          "heat": "295811",
-          "url": "https://s.weibo.com/weibo?q=%E5%B0%8F%E5%BF%83%E8%BF%99%E7%A7%8D%E6%89%8B%E6%9C%BA%E5%A3%B3%E6%AD%A3%E5%9C%A8%E5%81%B7%E6%8B%8D%E4%BD%A0%E7%9A%84%E9%9A%90%E7%A7%81&t=31&band_rank=12&Refer=top"
-        },
-        {
-          "title": "金饰克价一夜涨回1300元 新",
-          "desc": "围绕“金饰克价一夜涨回1300元 新”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "295654",
-          "url": "https://s.weibo.com/weibo?q=%E9%87%91%E9%A5%B0%E5%85%8B%E4%BB%B7%E4%B8%80%E5%A4%9C%E6%B6%A8%E5%9B%9E1300%E5%85%83&t=31&band_rank=13&Refer=top"
-        },
-        {
-          "title": "自媒体红利期只剩AI了",
-          "desc": "围绕“自媒体红利期只剩AI了”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "科技",
-          "heat": "295508",
-          "url": "https://s.weibo.com/weibo?q=%E8%87%AA%E5%AA%92%E4%BD%93%E7%BA%A2%E5%88%A9%E6%9C%9F%E5%8F%AA%E5%89%A9AI%E4%BA%86&t=31&band_rank=14&Refer=top"
-        },
-        {
-          "title": "iPhone18系列发布节奏",
-          "desc": "围绕“iPhone18系列发布节奏”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "295255",
-          "url": "https://s.weibo.com/weibo?q=iPhone18%E7%B3%BB%E5%88%97%E5%8F%91%E5%B8%83%E8%8A%82%E5%A5%8F&t=31&band_rank=15&Refer=top"
-        },
-        {
-          "title": "留几手希望葛夕道歉",
-          "desc": "围绕“留几手希望葛夕道歉”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "295167",
-          "url": "https://s.weibo.com/weibo?q=%E7%95%99%E5%87%A0%E6%89%8B%E5%B8%8C%E6%9C%9B%E8%91%9B%E5%A4%95%E9%81%93%E6%AD%89&t=31&band_rank=16&Refer=top"
-        },
-        {
-          "title": "关晓彤已到最佳赏味期",
-          "desc": "围绕“关晓彤已到最佳赏味期”的讨论升温，用户主要关注事件背景、最新进展以及对现实生活的直接影响。",
-          "category": "热议",
-          "heat": "295020",
-          "url": "https://s.weibo.com/weibo?q=%E5%85%B3%E6%99%93%E5%BD%A4%E5%B7%B2%E5%88%B0%E6%9C%80%E4%BD%B3%E8%B5%8F%E5%91%B3%E6%9C%9F&t=31&band_rank=17&Refer=top"
         }
       ]
     }
